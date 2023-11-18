@@ -1,7 +1,16 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main>
-      <h2>Home</h2>
+    <main className="px-5 py-8">
+      <Image
+        src="/banner-home-desconto.png"
+        alt="até 55% de desconto esse mês"
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="w-full h-auto"
+      />
     </main>
   );
 }
