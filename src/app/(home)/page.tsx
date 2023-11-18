@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Categories from "./components/categories";
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
         sizes="100vw"
         className="w-full h-auto"
       />
+
+      <div className="mt-8">
+        <Categories />
+      </div>
     </main>
   );
 }
