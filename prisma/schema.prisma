@@ -14,7 +14,7 @@ model Category {
   id        String    @id @default(uuid())
   name      String
   slug      String    @unique
-  imageURL  String
+  imageUrl  String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   products  Product[]
@@ -28,7 +28,7 @@ model Product {
   slug               String   @unique
   description        String
   basePrice          Decimal  @db.Decimal(10, 2)
-  imageURLs          String[]
+  imageUrls          String[]
   discountPercentage Int      @default(0)
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
