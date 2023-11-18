@@ -12,7 +12,7 @@ interface CategoriesItensProps {
 const CategoriesItens = ({ categorie }: CategoriesItensProps) => {
   return (
     <Link href={`/categorias/${categorie.slug}`} className="w-full">
-      <Badge variant="outline" className="px-4 py-3 w-full rounded-lg">
+      <Badge variant="outline" className="px-4 py-3 w-full rounded-lg gap-2">
         <KeyboardIcon />
         <span className="text-xs font-semibold">{categorie.name}</span>
       </Badge>
