@@ -1,18 +1,19 @@
 import { ProductWithTotalPrice } from "@/helpers/total-price-discount";
 import Image from "next/image";
-import { Badge } from "./badge";
+
 import { ArrowDownIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
 interface ProductItemProps {
   product: ProductWithTotalPrice;
 }
 
-const ProductItem = ({ product }: ProductItemProps) => {
+const ProductItemCategory = ({ product }: ProductItemProps) => {
   return (
     <Link href={`/produto/${product.slug}`}>
-      <div className="flex max-w-[246px] flex-col gap-4">
-        <div className="relative bg-accent w-[246px] h-[170px] rounded-lg flex items-center justify-center p-2">
+      <div className="flex w-full flex-col gap-4">
+        <div className="relative bg-accent w-full h-[170px] rounded-lg flex items-center justify-center p-2">
           <Image
             src={product.imageUrls[0]}
             alt={product.slug}
@@ -35,9 +36,9 @@ const ProductItem = ({ product }: ProductItemProps) => {
             {product.name}
           </p>
 
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             {product.discountPercentage > 0 ? (
-              <>
+              <div className="flex flex-col">
                 <p className="font-semibold">
                   {product.totalPrice.toLocaleString("pt-br", {
                     style: "currency",
@@ -46,14 +47,15 @@ const ProductItem = ({ product }: ProductItemProps) => {
                 </p>
 
                 <p className="opacity-60 line-through text-sm">
+                  de{" "}
                   {Number(product.basePrice).toLocaleString("pt-br", {
                     style: "currency",
                     currency: "BRL",
                   })}
                 </p>
-              </>
+              </div>
             ) : (
-              <p className="opacity-60 line-through text-sm">
+              <p className="font-semibold">
                 {Number(product.basePrice).toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
@@ -67,4 +69,4 @@ const ProductItem = ({ product }: ProductItemProps) => {
   );
 };
 
-export default ProductItem;
+export default ProductItemCategory;
