@@ -14,6 +14,7 @@ import { Card } from "./card";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
+import Link from "next/link";
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -100,14 +101,16 @@ const Header = () => {
                 Ofertas
               </Button>
 
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-full gap-2 justify-start px-2"
-              >
-                <ListOrderedIcon size={16} />
-                Catálogo
-              </Button>
+              <Link href="/catalogo">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="w-full gap-2 justify-start px-2"
+                >
+                  <ListOrderedIcon size={16} />
+                  Catálogo
+                </Button>
+              </Link>
             </div>
           </SheetContent>
         </Sheet>
