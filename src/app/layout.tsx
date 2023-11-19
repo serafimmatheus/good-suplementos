@@ -20,17 +20,19 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
+        <div className="flex flex-col h-full">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <div className="flex-1">{children}</div>
 
-          <Footer />
-        </ThemeProvider>
+            <Footer />
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
