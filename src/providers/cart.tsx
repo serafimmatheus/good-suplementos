@@ -1,10 +1,11 @@
 "use client";
 
 import { Product } from "@prisma/client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
 interface CartProduct extends Product {
   quantity: number;
+  totalPrice: number;
 }
 
 interface ICartContext {
@@ -12,6 +13,9 @@ interface ICartContext {
   cartTotalPrice: number;
   cartBasePrice: number;
   cartTotalDiscount: number;
+  subTotal: number;
+  total: number;
+  totalDiscount: number;
   addProductToCart: (product: CartProduct) => void;
   decreaseQuantity: (productId: string) => void;
   incrementQuantity: (productId: string) => void;
@@ -27,10 +31,27 @@ const CartContext = createContext<ICartContext>({
   decreaseQuantity: () => {},
   incrementQuantity: () => {},
   deleteProduct: () => {},
+  total: 0,
+  totalDiscount: 0,
+  subTotal: 0,
 });
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
+
+  const subTotal = useMemo(() => {
+    return products.reduce((acc, curr) => {
+      return acc + curr.quantity * Number(curr.basePrice);
+    }, 0);
+  }, [products]);
+
+  const total = useMemo(() => {
+    return products.reduce((acc, curr) => {
+      return acc + curr.quantity * Number(curr.totalPrice);
+    }, 0);
+  }, [products]);
+
+  const totalDiscount = subTotal - total;
 
   const addProductToCart = (product: CartProduct) => {
     const productAlreadyInCart = products.find(
@@ -91,6 +112,9 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         cartTotalPrice: 0,
         cartBasePrice: 0,
         cartTotalDiscount: 0,
+        total,
+        totalDiscount,
+        subTotal,
         addProductToCart,
         decreaseQuantity,
         incrementQuantity,
