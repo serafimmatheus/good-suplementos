@@ -7,20 +7,22 @@ export const createCheckout = async (product: CartProduct[]) => {
     apiVersion: "2023-10-16",
   });
 
+  const productMetadata = product.map((product) => ({
+    price_data: {
+      currency: "brl",
+      product_data: {
+        name: product.name,
+        images: product.imageUrls,
+        description: product.description,
+      },
+      unit_amount: Number(product.totalPrice) * 100,
+    },
+    quantity: product.quantity,
+  }));
+
   const checkout = await stripe.checkout.sessions.create({
     payment_method_types: ["card", "boleto"],
-    line_items: product.map((product) => ({
-      price_data: {
-        currency: "brl",
-        product_data: {
-          name: product.name,
-          images: product.imageUrls,
-          description: product.description,
-        },
-        unit_amount: Number(product.totalPrice) * 100,
-      },
-      quantity: product.quantity,
-    })),
+    line_items: productMetadata,
     mode: "payment",
     success_url: `http://localhost:3000`,
     cancel_url: `http://localhost:3000`,
