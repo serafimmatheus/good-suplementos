@@ -1,5 +1,4 @@
 import { prismaClient } from "@/lib/prisma";
-import Image from "next/image";
 import Thumbnail from "../components/thumbnail";
 import { totalPriceDiscount } from "@/helpers/total-price-discount";
 
