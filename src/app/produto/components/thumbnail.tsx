@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import TextTitleBase from "@/components/ui/text-title-base";
 import { ProductWithTotalPrice } from "@/helpers/total-price-discount";
+import { useCart } from "@/providers/cart";
 import { Product } from "@prisma/client";
 import {
   ArrowDownIcon,
@@ -24,6 +25,8 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [count, setCount] = useState(1);
 
+  const { addProductToCart } = useCart();
+
   const handlePrevCount = () => {
     if (count === 1) {
       return;
@@ -34,6 +37,10 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
 
   const handleNextCount = () => {
     setCount((prev) => prev + 1);
+  };
+
+  const handleAddProductToCart = () => {
+    addProductToCart({ ...product, quantity: count });
   };
 
   return (
@@ -121,7 +128,10 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
         </div>
 
         <div className="flex flex-col gap-4 py-4">
-          <Button className="bg-primary w-full text-sm uppercase">
+          <Button
+            className="bg-primary w-full text-sm uppercase"
+            onClick={handleAddProductToCart}
+          >
             Adicionar ao carrinho
           </Button>
 

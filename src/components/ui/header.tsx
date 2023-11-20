@@ -21,6 +21,7 @@ import {
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import Link from "next/link";
+import Cart from "./cart";
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -138,9 +139,7 @@ const Header = () => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <SheetHeader className="text-lg font-semibold">
-              Carrinho
-            </SheetHeader>
+            <Cart />
           </SheetContent>
         </Sheet>
       </div>
