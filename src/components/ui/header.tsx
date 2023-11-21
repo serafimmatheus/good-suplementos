@@ -106,14 +106,16 @@ const Header = () => {
                 </Link>
               </SheetClose>
 
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-full gap-2 justify-start px-2"
-              >
-                <PercentIcon size={16} />
-                Ofertas
-              </Button>
+              <Link href="/ofertas">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="w-full gap-2 justify-start px-2"
+                >
+                  <PercentIcon size={16} />
+                  Ofertas
+                </Button>
+              </Link>
 
               <SheetClose asChild>
                 <Link href="/catalogo">
