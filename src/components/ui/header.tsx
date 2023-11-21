@@ -22,9 +22,12 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import Link from "next/link";
 import Cart from "./cart";
+import { useCart } from "@/providers/cart";
 
 const Header = () => {
   const { data: session, status } = useSession();
+
+  const { products } = useCart();
 
   const handleLogin = async () => {
     await signIn();
@@ -131,17 +134,24 @@ const Header = () => {
         <h1>
           GOOD <span>Suplementos</span>
         </h1>
+        <div className="relative">
+          {products.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 rounded-full text-white text-xs px-1">
+              {products.length}
+            </span>
+          )}
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon">
-              <ShoppingCartIcon />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <Cart />
-          </SheetContent>
-        </Sheet>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <ShoppingCartIcon />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <Cart />
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </Card>
   );
