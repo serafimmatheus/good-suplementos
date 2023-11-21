@@ -24,8 +24,8 @@ export const createCheckout = async (product: CartProduct[]) => {
     payment_method_types: ["card", "boleto"],
     line_items: productMetadata,
     mode: "payment",
-    success_url: `http://localhost:3000`,
-    cancel_url: `http://localhost:3000`,
+    success_url: process.env.HOST_URL,
+    cancel_url: process.env.HOST_URL,
   });
 
   return checkout;
