@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Categories from "./components/categories";
 import { prismaClient } from "@/lib/prisma";
 import ProductList from "./components/product-list";
@@ -14,18 +13,18 @@ export default async function Home() {
     },
   });
 
-  const keyboards = await prismaClient.product.findMany({
+  const alfajors = await prismaClient.product.findMany({
     where: {
       category: {
-        slug: "keyboards",
+        slug: "alfajor",
       },
     },
   });
 
-  const mouses = await prismaClient.product.findMany({
+  const creatina = await prismaClient.product.findMany({
     where: {
       category: {
-        slug: "mouses",
+        slug: "creatinas",
       },
     },
   });
@@ -52,8 +51,8 @@ export default async function Home() {
       />
 
       <div className="my-8">
-        <TextTitleBase>Teclados</TextTitleBase>
-        <ProductList products={keyboards} />
+        <TextTitleBase>Alfajors</TextTitleBase>
+        <ProductList products={alfajors} />
       </div>
 
       <PromoBanner
@@ -62,8 +61,8 @@ export default async function Home() {
       />
 
       <div className="my-8">
-        <TextTitleBase>Mouses</TextTitleBase>
-        <ProductList products={mouses} />
+        <TextTitleBase>Creatinas</TextTitleBase>
+        <ProductList products={creatina} />
       </div>
     </main>
   );

@@ -44,9 +44,9 @@ const CartContext = createContext<ICartContext>({
 });
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
-  const [products, setProducts] = useState<CartProduct[]>(
-    JSON.parse(localStorage.getItem("@good-sup-ecomerce:cart") || "[]")
-  );
+  const [products, setProducts] = useState<CartProduct[]>([]);
+
+  // JSON.parse(localStorage.getItem("@good-sup-ecomerce:cart") || []);
 
   const subTotal = useMemo(() => {
     return products.reduce((acc, curr) => {

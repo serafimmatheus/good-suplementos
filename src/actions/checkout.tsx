@@ -2,7 +2,23 @@
 import { CartProduct } from "@/providers/cart";
 import Stripe from "stripe";
 
-export const createCheckout = async (product: CartProduct[]) => {
+interface ICheckout {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  basePrice: number;
+  imageUrls: string[];
+  discountPercentage: number;
+  createdAt: Date;
+  updatedAt: Date;
+  categoryId: string;
+  variationId: string | null;
+  quantity: number;
+  totalPrice: number;
+}
+
+export const createCheckout = async (product: ICheckout[]) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
     apiVersion: "2023-10-16",
   });
@@ -15,10 +31,12 @@ export const createCheckout = async (product: CartProduct[]) => {
         images: product.imageUrls,
         description: product.description,
       },
-      unit_amount: Number(product.totalPrice) * 100,
+      unit_amount: Math.round(product.basePrice * 100),
     },
     quantity: product.quantity,
   }));
+
+  console.log(productMetadata);
 
   const checkout = await stripe.checkout.sessions.create({
     payment_method_types: ["card", "boleto"],
