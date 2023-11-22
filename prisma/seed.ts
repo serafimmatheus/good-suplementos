@@ -4,619 +4,261 @@ const prisma = new PrismaClient();
 
 async function main() {
   try {
-    const mousesCategory = await prisma.category.create({
+    const creatinaCategory = await prisma.category.create({
       data: {
-        name: "Mouses",
-        slug: "mouses",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mouses.png",
+        name: "Creatina",
+        slug: "creatinas",
+        imageUrl: "",
       },
     });
 
-    const mouses = [
+    const creatinas = [
       {
-        name: "Logitech MX Master 3s",
-        slug: "logitech-mx-master-3s",
+        name: "Creatina 300g - Max Titanium MonoHidratada",
+        slug: "creatina-300g-max-titanium-monoHidratada",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_mx-master-3s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_mx-master-3s.png",
-        ],
-        basePrice: 650,
-        categoryId: mousesCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Logitech Pro X Superlight",
-        slug: "logitech-pro-x-superlight",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-superlight.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-superlight.png",
-        ],
-        basePrice: 750,
-        categoryId: mousesCategory.id,
-        discountPercentage: 5, // 5% discount
-      },
-      {
-        name: "Logitech G305 Lightspeed",
-        slug: "logitech-g305-lightspeed",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed.png",
-        ],
-        basePrice: 300,
-        categoryId: mousesCategory.id,
-        discountPercentage: 15, // 15% discount
-      },
-      {
-        name: "Hyperx Pulsefire Dart",
-        slug: "hyperx-pulsefire-dart",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-dart.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-dart.png",
-        ],
-        basePrice: 600,
-        categoryId: mousesCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Razer Deathadder V2 Pro",
-        slug: "razer-deathadder-v2-pro",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-deathadder.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-deathadder.png",
-        ],
-        basePrice: 350,
-        categoryId: mousesCategory.id,
-        discountPercentage: 0,
-      },
-    ];
-
-    await prisma.product.createMany({
-      data: mouses,
-    });
-
-    const keyboardsCategory = await prisma.category.create({
-      data: {
-        name: "Teclados",
-        slug: "keyboards",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/keyboards.png",
-      },
-    });
-
-    const keyboards = [
-      {
-        name: "Logitech MX Keys Mini",
-        slug: "logitech-mx-keys-mini",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-mini.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-mini.png",
-        ],
-        basePrice: 650,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Logitech MX Keys S",
-        slug: "logitech-mx-keys-s",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-s.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-s.png",
-        ],
-        basePrice: 750,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Logitech Pop Keys",
-        slug: "logitech-pop-keys",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-pop-keys.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-pop-keys.png",
-        ],
-        basePrice: 440,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Logitech MX Mechanical",
-        slug: "logitech-mx-mechanical",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-mechanical.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-mechanical.png",
-        ],
-        basePrice: 700,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 15, // 10% discount
-      },
-      {
-        name: "Epomaker TH80",
-        slug: "epomaker-th80",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_epomaker-th80.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_epomaker-th80.png",
-        ],
-        basePrice: 500,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Redragon Gamer Ashe",
-        slug: "redragon-gamer-ashe",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_redragon-gamer-ashe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_redragon-gamer-ashe.png",
-        ],
-        basePrice: 400,
-        categoryId: keyboardsCategory.id,
-        discountPercentage: 25, // 10% discount
-      },
-    ];
-
-    await prisma.product.createMany({
-      data: keyboards,
-    });
-
-    const headphonesCategory = await prisma.category.create({
-      data: {
-        name: "Fones",
-        slug: "headphones",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/headphones.png",
-      },
-    });
-
-    const headphones = [
-      {
-        name: "Logitech Zone Vibe 100",
-        slug: "logitech-zone-vibe-100",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-vibe.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-vibe.png",
-        ],
-        basePrice: 750,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Logitech Pro X 2 Lightspeed",
-        slug: "logitech-pro-x-2-lightspeed",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed-phone.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed-phone.png",
-        ],
-        basePrice: 1200,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Logitech Astro A30",
-        slug: "logitech-astro-a30",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-astro-a30.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-astro-a30.png",
-        ],
-        basePrice: 1500,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 15, // 10% discount
-      },
-      {
-        name: "Logitech Zone Wired Earbuds",
-        slug: "logitech-zone-wired-earbuds",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-earbuds.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-earbuds.png",
-        ],
-        basePrice: 550,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Hyperx Cloud Stinger 2",
-        slug: "hyperx-cloud-stinger-2",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-stinger.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-stinger.png",
-        ],
-        basePrice: 250,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Razer Kraken X",
-        slug: "razer-kraken-x",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-kraken.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-kraken.png",
-        ],
-        basePrice: 200,
-        categoryId: headphonesCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-    ];
-
-    await prisma.product.createMany({
-      data: headphones,
-    });
-
-    const mousepadsCategory = await prisma.category.create({
-      data: {
-        name: "Mousepads",
-        slug: "mousepads",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mousepads.png",
-      },
-    });
-
-    const mousepads = [
-      {
-        name: "Logitech Powerplay",
-        slug: "logitech-powerplay",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-powerplay.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-powerplay.png",
-        ],
-        basePrice: 950,
-        categoryId: mousepadsCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Logitech Desk Mat",
-        slug: "logitech-desk-mat",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-desk-mat.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-desk-mat.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157717-150-auto.webp?alt=media&token=e28fb4e5-380b-43af-b27d-e423f4c21534",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157718-150-auto.webp?alt=media&token=b91a1939-7625-4954-bc33-fb4608b353fc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157719-150-auto.webp?alt=media&token=c33066af-d7a6-434d-bd0c-4e89eedf3471",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157720-150-auto.webp?alt=media&token=d28e512a-29a6-49de-9b86-ab7395701d4c",
         ],
         basePrice: 150,
-        categoryId: mousepadsCategory.id,
-        discountPercentage: 0, // 10% discount
+        categoryId: creatinaCategory.id,
+        discountPercentage: 7, // 10% discount
       },
+
       {
-        name: "Logitech G740",
-        slug: "logitech-g740",
+        name: "Creatina 150g - Max Titanium MonoHidratada",
+        slug: "creatina-150g-max-titanium-monoHidratada",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-g740.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-g740.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157717-150-auto.webp?alt=media&token=e28fb4e5-380b-43af-b27d-e423f4c21534",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157718-150-auto.webp?alt=media&token=b91a1939-7625-4954-bc33-fb4608b353fc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157719-150-auto.webp?alt=media&token=c33066af-d7a6-434d-bd0c-4e89eedf3471",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157720-150-auto.webp?alt=media&token=d28e512a-29a6-49de-9b86-ab7395701d4c",
         ],
-        basePrice: 200,
-        categoryId: mousepadsCategory.id,
-        discountPercentage: 5, // 10% discount
+        basePrice: 105,
+        categoryId: creatinaCategory.id,
+        discountPercentage: 7, // 10% discount
       },
+
       {
-        name: "Logitech Mousepad Studio Series",
-        slug: "logitech-mousepad-studio-series",
+        name: "Creatina 300g - DUX NUTRITIUM MonoHidratada",
+        slug: "creatina-300g-DUX-NUTRITIUM-monoHidratada",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-studio-series.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-studio-series.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F1-creatina-dux-300g.png?alt=media&token=86943425-7fcc-48c7-a19a-f8d897ac41dd",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F1-creatina-dux-300g.png?alt=media&token=86943425-7fcc-48c7-a19a-f8d897ac41dd",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F3-creatina-dux-300g.png?alt=media&token=bca62387-6c17-4b85-b2bc-6199ab56990c",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F4-creatina-dux-300g.webp?alt=media&token=507cf2f6-848c-49a4-90fb-e072f0c68f2e",
         ],
-        basePrice: 250,
-        categoryId: mousepadsCategory.id,
-        discountPercentage: 15, // 10% discount
-      },
-      {
-        name: "Force One Skyhawk Dark",
-        slug: "force-one-skyhawk-dark",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-dark.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-dark.png",
-        ],
-        basePrice: 300,
-        categoryId: mousepadsCategory.id,
+        basePrice: 160,
+        categoryId: creatinaCategory.id,
         discountPercentage: 10, // 10% discount
       },
       {
-        name: "Force One Skyhawk Snow",
-        slug: "force-one-skyhawk-snow",
+        name: "Creatina 100g - DUX NUTRITIUM MonoHidratada",
+        slug: "creatina-100g-DUX-NUTRITIUM-monoHidratada",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-snow.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-snow.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
         ],
-        basePrice: 300,
-        categoryId: mousepadsCategory.id,
-        discountPercentage: 5, // 10% discount
+        basePrice: 77.99,
+        categoryId: creatinaCategory.id,
+        discountPercentage: 10, // 10% discount
       },
     ];
 
     await prisma.product.createMany({
-      data: mousepads,
+      data: creatinas,
     });
 
-    const monitorsCategory = await prisma.category.create({
+    const pastaAmendoimCategory = await prisma.category.create({
       data: {
-        name: "Monitores",
-        slug: "monitors",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/monitors.png",
+        name: "Pasta de Amendoim",
+        slug: "pasta-de-amendoim",
+        imageUrl: "",
       },
     });
 
-    const monitors = [
+    const pastasDeAmendoim = [
       {
-        name: "Dell S2421HN",
-        slug: "dell-s2421hn",
+        name: "Pasta de Amendoim - 500g - Chocolate Belga - Rock Peanut",
+        slug: "pasta-de-amendoim-500g-chocolate-belga-rock-peanut",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S2421HN.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S2421HN.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-choco-belga.webp?alt=media&token=c483155e-5f4c-4ef0-ba12-c1574b793806",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-choco-belga.webp?alt=media&token=828ff009-272c-41a8-84aa-5bef7ff711f1",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-choco-belga.webp?alt=media&token=c483155e-5f4c-4ef0-ba12-c1574b793806",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-choco-belga.webp?alt=media&token=828ff009-272c-41a8-84aa-5bef7ff711f1",
         ],
-        basePrice: 1500,
-        categoryId: monitorsCategory.id,
-        discountPercentage: 15, // 10% discount
-      },
-      {
-        name: "Dell P2422H",
-        slug: "dell-p2422h",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2422H.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2422H.png",
-        ],
-        basePrice: 2000,
-        categoryId: monitorsCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Dell P2723QE",
-        slug: "dell-p2723qe",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2723QE.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2723QE.png",
-        ],
-        basePrice: 2500,
-        categoryId: monitorsCategory.id,
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
       },
       {
-        name: "Dell S3422DWG",
-        slug: "dell-s3422dwg",
+        name: "Pasta de Amendoim - 500g - Chocolate Branco - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-chocolate-branco-rock-peanut",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3422DWG.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3422DWG.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco.webp?alt=media&token=03179df0-caac-4c8a-890f-c0f5f5b4f437",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco.webp?alt=media&token=e0d961b9-9911-4a3c-af68-de38699b8481",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco.webp?alt=media&token=03179df0-caac-4c8a-890f-c0f5f5b4f437",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco.webp?alt=media&token=e0d961b9-9911-4a3c-af68-de38699b8481",
         ],
-        basePrice: 3200,
-        categoryId: monitorsCategory.id,
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
       },
       {
-        name: "Dell S3222DGM",
-        slug: "dell-s3222dgm",
+        name: "Pasta de Amendoim - 500g - Chocolate Branco c/coco - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-chocolate-branco-c-coco-rock-peanut",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3222DGM.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3222DGM.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco-coco.jpg?alt=media&token=7d6179a6-05eb-476c-be19-5ac885c940a3",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco-coco.jpg?alt=media&token=38c86ca2-a500-4078-b788-2031bcba342e",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco-coco.jpg?alt=media&token=7d6179a6-05eb-476c-be19-5ac885c940a3",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco-coco.jpg?alt=media&token=38c86ca2-a500-4078-b788-2031bcba342e",
         ],
-        basePrice: 3500,
-        categoryId: monitorsCategory.id,
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
       },
       {
-        name: "Dell AW2524HF",
-        slug: "dell-aw2524hf",
+        name: "Pasta de Amendoim - 500g - Chocolate c/coco - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-chocolate-c-coco-rock-peanut",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-AW2524HF.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-AW2524HF.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-coco.webp?alt=media&token=02591f73-10c0-44e1-a066-9d4dd94115cc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
         ],
-        basePrice: 4200,
-        categoryId: monitorsCategory.id,
-        discountPercentage: 10, // 10% discount
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Pasta de Amendoim - 500g - Chocolate c/coco - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-chocolate-choco-c-coco-rock-peanut",
+        description:
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-coco.webp?alt=media&token=02591f73-10c0-44e1-a066-9d4dd94115cc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
+        ],
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Pasta de Amendoim - 500g - Doce de leite - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-doce-de-leite-rock-peanut",
+        description:
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-doce-de-leite.jpeg?alt=media&token=7527984e-a8fe-431f-81a9-915087826e05",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-doce-de-leite.jpg?alt=media&token=5806a649-b4ea-49ca-8eb6-029ea1012d0d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-doce-de-leite.jpeg?alt=media&token=7527984e-a8fe-431f-81a9-915087826e05",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-doce-de-leite.jpg?alt=media&token=5806a649-b4ea-49ca-8eb6-029ea1012d0d",
+        ],
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Pasta de Amendoim - 500g - Cookies All Black - Rock Peanut",
+        slug: "pastas-de-amendoim-500g-cookies-all-black-rock-peanut",
+        description:
+          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-cookies-all-black.jpg?alt=media&token=3e3bfc4f-31ff-48a7-afa0-9c039f504744",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-cookies-all-black.jpg?alt=media&token=5c5f5491-39d6-4a55-94e6-073849b598a3",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-cookies-all-black.jpg?alt=media&token=ceba4b1b-40d4-43af-8e77-1d84af539402",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F4-cookies-all-black.jpg?alt=media&token=61d4af63-00bb-4862-8679-8d5b9bb70824",
+        ],
+        basePrice: 49.9,
+        categoryId: pastaAmendoimCategory.id,
+        discountPercentage: 0, // 10% discount
       },
     ];
 
     await prisma.product.createMany({
-      data: monitors,
+      data: pastasDeAmendoim,
     });
 
-    const speakersCategory = await prisma.category.create({
+    const alfajorCategory = await prisma.category.create({
       data: {
-        name: "Speakers",
-        slug: "speakers",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/speakers.png",
+        name: "Alfajor",
+        slug: "alfajor",
+        imageUrl: "",
       },
     });
 
-    const speakers = [
+    const alfajorProducts = [
       {
-        name: "Logitech Surround Sound Z607",
-        slug: "logitech-surround-sound-z607",
+        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades Chocolate Belga",
+        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-chocolate-belga",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-surround-z607.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-surround-z607.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F1-alfajor-choco-belga-rock.jpg?alt=media&token=a32859ae-ed9d-46ee-8056-be6cab9dda38",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F2-alfajor-choco-belga-rock.jpg?alt=media&token=cca8c407-0eb1-432c-aa59-65cb14899f6d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-belga-rock.jpg?alt=media&token=808943e3-689e-4112-8bfb-c672cdf2cb9d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-choco-belga-rock.jpg?alt=media&token=f5637a5e-4c62-40c0-8247-dd18e3d29bf8",
         ],
-        basePrice: 1200,
-        categoryId: speakersCategory.id,
-        discountPercentage: 5, // 10% discount
-      },
-      {
-        name: "Logitech Dock",
-        slug: "logitech-dock",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-dock.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-dock.png",
-        ],
-        basePrice: 4500,
-        categoryId: speakersCategory.id,
-        discountPercentage: 15, // 10% discount
-      },
-      {
-        name: "Sony SA-Z9R Speakers",
-        slug: "sony-sa-z9r-speakers",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-SA-Z9R.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-SA-Z9R.png",
-        ],
-        basePrice: 4000,
-        categoryId: speakersCategory.id,
+        basePrice: 139.99,
+        categoryId: alfajorCategory.id,
         discountPercentage: 10, // 10% discount
       },
       {
-        name: "Sony XB43 Extra Bass",
-        slug: "sony-xb43-extra-bass",
+        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades Chocolate Branco",
+        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-chocolate-branco",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-extra-bass.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-extra-bass.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F1-alfajor-choco-branco-rock.jpeg?alt=media&token=84dcf994-bae7-447b-9bd4-d724b521f6b7",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F2-alfajor-choco-branco-rock.jpeg?alt=media&token=f892b99a-f914-487b-8a9b-ea1d7905cb28",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-branco-rock.jpeg?alt=media&token=d1b03a34-a468-4430-97df-6611c286a1b7",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-branco-rock.jpeg?alt=media&token=8e5b6790-52d9-47c6-a252-a9995b28529a",
         ],
-        basePrice: 3200,
-        categoryId: speakersCategory.id,
-        discountPercentage: 0, // 10% discount
+        basePrice: 139.99,
+        categoryId: alfajorCategory.id,
+        discountPercentage: 10, // 10% discount
       },
       {
-        name: "Sony XB23 Extra Bass",
-        slug: "sony-xb23-extra-bass",
+        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades LEITE EM PÓ",
+        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-leite-em-po",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
         imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-XB23.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-XB23.png",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F1-alfajor-cream-leite-em-po-rock.jpg?alt=media&token=7b38c9ac-0085-4ac8-a4c1-b18cb552b825",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F2-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=8db076ac-1eb8-4803-a25e-8883b2f69960",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=9ae02d53-5424-49a9-8087-338b11cb4b4d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=edbe972e-e75c-4996-9427-80f70c81be27",
         ],
-        basePrice: 3500,
-        categoryId: speakersCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Sony HT-S200F Soundbar",
-        slug: "sony-ht-s200f-soundbar",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
-        imageUrls: [
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-S200F.png",
-          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-S200F.png",
-        ],
-        basePrice: 2500,
-        categoryId: speakersCategory.id,
-        discountPercentage: 0, // 10% discount
+        basePrice: 139.99,
+        categoryId: alfajorCategory.id,
+        discountPercentage: 10, // 10% discount
       },
     ];
 
     await prisma.product.createMany({
-      data: speakers,
+      data: alfajorProducts,
     });
 
     console.log("Seed completed successfully");
