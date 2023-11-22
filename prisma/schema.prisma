@@ -36,7 +36,22 @@ model Product {
   categoryId String
   category   Category @relation(fields: [categoryId], references: [id])
 
+  variationId String?
+  variation   Variation? @relation(fields: [variationId], references: [id])
+
   @@map("products")
+}
+
+model Variation {
+  id        String    @id @default(uuid())
+  name      String
+  slug      String    @unique
+  value     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Product   Product[]
+
+  @@map("variations")
 }
 
 model Account {
