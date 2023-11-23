@@ -111,8 +111,12 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
               </p>
             </div>
           </div>
-
-          <Variant variants={product.variation} selectedVariant={setVariant} />
+          {product.variation.length > 0 && (
+            <Variant
+              variants={product.variation}
+              selectedVariant={setVariant}
+            />
+          )}
         </div>
 
         <div className="flex gap-4 items-center">
@@ -135,12 +139,33 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
         </div>
 
         <div className="flex flex-col gap-4 py-4">
-          <Button
-            className="bg-primary w-full text-sm uppercase"
-            onClick={handleAddProductToCart}
-          >
-            Adicionar ao carrinho
-          </Button>
+          <div>
+            {/* {product.variation.length === 0 && (
+              <Button
+                className="bg-primary w-full text-sm uppercase"
+                onClick={handleAddProductToCart}
+              >
+                Adicionar ao carrinho
+              </Button>
+            )} */}
+
+            {(variant.length > 0 && product.variation.length > 0) ||
+            product.variation.length === 0 ? (
+              <Button
+                className="bg-primary w-full text-sm uppercase"
+                onClick={handleAddProductToCart}
+              >
+                Adicionar ao carrinho
+              </Button>
+            ) : (
+              <Button
+                className="bg-accent text-gray-400 w-full text-sm uppercase"
+                disabled
+              >
+                Selecione um sabor
+              </Button>
+            )}
+          </div>
 
           <div className="bg-accent rounded-lg flex gap-3 items-center justify-between py-5 px-3">
             <TruckIcon size={32} />
