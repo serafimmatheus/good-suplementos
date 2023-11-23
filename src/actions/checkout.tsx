@@ -13,7 +13,7 @@ interface ICheckout {
   createdAt: Date;
   updatedAt: Date;
   categoryId: string;
-  variationId: string | null;
+  variation: string[];
   quantity: number;
   totalPrice: number;
 }
