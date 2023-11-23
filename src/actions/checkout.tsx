@@ -40,9 +40,9 @@ export const createCheckout = async (product: ICheckout[], orderId: String) => {
 
   const checkout = await stripe.checkout.sessions.create({
     metadata: {
-      orderId: orderId,
+      orderId: orderId.toString(),
     },
-    payment_method_types: ["card", "boleto"],
+    payment_method_types: ["card"],
     line_items: productMetadata,
     mode: "payment",
     success_url: process.env.HOST_URL,

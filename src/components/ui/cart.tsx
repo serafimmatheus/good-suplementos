@@ -21,7 +21,9 @@ const Cart = () => {
       return;
     }
 
-    const order = await createOrder(products, (session?.user as any).id);
+    const order = await createOrder(products, (session!.user! as any).id);
+
+    console.log(order);
 
     const checkout = await createCheckout(products as any, (order as any).id);
 
@@ -101,14 +103,25 @@ const Cart = () => {
               </span>
             </li>
 
-            <Button
-              size="icon"
-              className="w-full gap-2 uppercase font-semibold"
-              onClick={handleFinishCheckout}
-            >
-              <ShoppingCartIcon size={16} />
-              Finalizar compra
-            </Button>
+            {session?.user ? (
+              <Button
+                size="icon"
+                className="w-full gap-2 uppercase font-semibold"
+                onClick={handleFinishCheckout}
+              >
+                <ShoppingCartIcon size={16} />
+                Finalizar compra
+              </Button>
+            ) : (
+              <Button
+                size="icon"
+                className="bg-accent w-full gap-2 uppercase font-semibold"
+                disabled
+              >
+                <ShoppingCartIcon size={16} />
+                Fazer login para finalizar compra
+              </Button>
+            )}
           </ul>
         )}
       </div>
