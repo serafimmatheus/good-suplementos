@@ -3,7 +3,6 @@
 import { Product } from "@prisma/client";
 import React, {
   createContext,
-  use,
   useContext,
   useEffect,
   useMemo,
@@ -120,7 +119,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     setProducts(
-      JSON.parse(localStorage.getItem("@fsw-store/cart-products") || "[]")
+      JSON.parse(localStorage.getItem("@good-sup-ecomerce:cart") || "[]")
     );
   }, []);
 
