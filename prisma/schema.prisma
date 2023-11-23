@@ -10,8 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum OrderStatus {
+  WAITING_FOR_PAYMENT
+  PAYMENT_CONFIRMED
+}
+
 model Category {
-  id        String    @id @default(uuid())
+  id        String    @id @default(cuid())
   name      String
   slug      String    @unique
   imageUrl  String
@@ -23,7 +28,7 @@ model Category {
 }
 
 model Product {
-  id                 String   @id @default(uuid())
+  id                 String   @id @default(cuid())
   name               String
   slug               String   @unique
   description        String
@@ -33,15 +38,17 @@ model Product {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   variation          String[]
+  quantity           Int      @default(0)
 
-  categoryId String
-  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  category     Category       @relation(fields: [categoryId], references: [id])
+  orderProduct OrderProduct[]
 
   @@map("products")
 }
 
 // model Variation {
-//   id        String    @id @default(uuid())
+//   id        String    @id @default(cuid())
 //   name      String
 //   slug      String    @unique
 //   value     String
@@ -51,6 +58,33 @@ model Product {
 
 //   @@map("variations")
 // }
+
+model Order {
+  id           String         @id @default(cuid())
+  status       OrderStatus    @default(WAITING_FOR_PAYMENT)
+  userId       String
+  user         User           @relation(fields: [userId], references: [id])
+  orderProduct OrderProduct[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@map("orders")
+}
+
+model OrderProduct {
+  id                 String   @id @default(cuid())
+  productId          String
+  product            Product  @relation(fields: [productId], references: [id])
+  orderId            String
+  order              Order    @relation(fields: [orderId], references: [id])
+  basePrice          Decimal  @db.Decimal(10, 2)
+  quantity           Int
+  discountPercentage Int      @default(0)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@map("order-products")
+}
 
 model Account {
   id                String  @id @default(cuid())
@@ -87,6 +121,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  order         Order[]
 }
 
 model VerificationToken {

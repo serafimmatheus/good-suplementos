@@ -19,13 +19,14 @@ async function main() {
         description:
           "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157717-150-auto.webp?alt=media&token=e28fb4e5-380b-43af-b27d-e423f4c21534",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157718-150-auto.webp?alt=media&token=b91a1939-7625-4954-bc33-fb4608b353fc",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157719-150-auto.webp?alt=media&token=c33066af-d7a6-434d-bd0c-4e89eedf3471",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157720-150-auto.webp?alt=media&token=d28e512a-29a6-49de-9b86-ab7395701d4c",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F1-creatina.webp?alt=media&token=bc9db580-6e2b-4008-96bb-64fd9ac7c82b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F2-creatina.webp?alt=media&token=335ae5f1-0d72-4f75-9058-1df0fb5c73ef",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F1-creatina.webp?alt=media&token=bc9db580-6e2b-4008-96bb-64fd9ac7c82b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F2-creatina.webp?alt=media&token=335ae5f1-0d72-4f75-9058-1df0fb5c73ef",
         ],
         variation: [],
         basePrice: 150,
+        quantity: 10,
         categoryId: creatinaCategory.id,
         discountPercentage: 7, // 10% discount
       },
@@ -36,12 +37,13 @@ async function main() {
         description:
           "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157717-150-auto.webp?alt=media&token=e28fb4e5-380b-43af-b27d-e423f4c21534",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157718-150-auto.webp?alt=media&token=b91a1939-7625-4954-bc33-fb4608b353fc",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157719-150-auto.webp?alt=media&token=c33066af-d7a6-434d-bd0c-4e89eedf3471",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F300%2F157720-150-auto.webp?alt=media&token=d28e512a-29a6-49de-9b86-ab7395701d4c",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F150%2F1-creatina.webp?alt=media&token=d51dfe50-714b-40fb-bcaf-9581862b634f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F150%2F2-creatina.webp?alt=media&token=809e8fed-c586-4552-8525-2349b47060d5",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F150%2F1-creatina.webp?alt=media&token=d51dfe50-714b-40fb-bcaf-9581862b634f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F150%2F2-creatina.webp?alt=media&token=809e8fed-c586-4552-8525-2349b47060d5",
         ],
         basePrice: 105,
+        quantity: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 7, // 10% discount
@@ -54,11 +56,12 @@ async function main() {
           "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F1-creatina-dux-300g.png?alt=media&token=86943425-7fcc-48c7-a19a-f8d897ac41dd",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F4-creatina-dux-300g.webp?alt=media&token=507cf2f6-848c-49a4-90fb-e072f0c68f2e",
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F1-creatina-dux-300g.png?alt=media&token=86943425-7fcc-48c7-a19a-f8d897ac41dd",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F3-creatina-dux-300g.png?alt=media&token=bca62387-6c17-4b85-b2bc-6199ab56990c",
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F4-creatina-dux-300g.webp?alt=media&token=507cf2f6-848c-49a4-90fb-e072f0c68f2e",
         ],
         basePrice: 160,
+        quantity: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 10, // 10% discount
@@ -69,15 +72,84 @@ async function main() {
         description:
           "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
         imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F2-creatina.webp?alt=media&token=d66945ce-2811-4d7f-9a08-0a40a7e141af",
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F100%2F163319-800-auto.webp?alt=media&token=2e4f5dec-37ac-4abb-a4cf-31283f2c18ac",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F2-creatina.webp?alt=media&token=d66945ce-2811-4d7f-9a08-0a40a7e141af",
         ],
         basePrice: 77.99,
+        quantity: 0,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 10, // 10% discount
+      },
+      {
+        name: "Creatina 1kg Monohidratada 100% Pura Integralmedica",
+        slug: "creatina-1kg-monohidratada-100-pura-integralmedica",
+        description:
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F1kg%2F1-creatina.jpeg?alt=media&token=d4303c2d-ff86-4efa-b2b5-2bbceb48573d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F1kg%2F2-creatina.jpeg?alt=media&token=9f1d24e7-cd32-4afe-82a6-1eaa26019b07",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F1kg%2F1-creatina.jpeg?alt=media&token=d4303c2d-ff86-4efa-b2b5-2bbceb48573d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F1kg%2F2-creatina.jpeg?alt=media&token=9f1d24e7-cd32-4afe-82a6-1eaa26019b07",
+        ],
+        basePrice: 379.9,
+        quantity: 10,
+        variation: [],
+        categoryId: creatinaCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Creatina 300g Monohidratada 100% Pura Integralmedica",
+        slug: "creatina-300g-monohidratada-100-pura-integralmedica",
+        description:
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F300g%2F1-creatina.webp?alt=media&token=c12b0a77-9a4f-4a2f-bbc1-58caff853aa0",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F300g%2F2-creatina.webp?alt=media&token=6c2ad17a-76db-4f49-87ac-db8a797a17f7",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F300g%2F1-creatina.webp?alt=media&token=c12b0a77-9a4f-4a2f-bbc1-58caff853aa0",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F300g%2F2-creatina.webp?alt=media&token=6c2ad17a-76db-4f49-87ac-db8a797a17f7",
+        ],
+        basePrice: 159.9,
+        quantity: 10,
+        variation: [],
+        categoryId: creatinaCategory.id,
+        discountPercentage: 9, // 10% discount
+      },
+      {
+        name: "Creatina 150g Monohidratada 100% Pura Integralmedica",
+        slug: "creatina-150g-monohidratada-100-pura-integralmedica",
+        description:
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
+        ],
+        basePrice: 89.9,
+        quantity: 10,
+        variation: [],
+        categoryId: creatinaCategory.id,
+        discountPercentage: 5, // 10% discount
+      },
+      {
+        name: "Creatina 350g Monohidratada 100% Pura Darkness",
+        slug: "creatina-150g-monohidratada-100-pura-darkness",
+        description:
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/darkness%2Fcreatina-350%2F1-creatina.jpeg?alt=media&token=b25e76b5-fd26-4998-ac6a-65b3af648b69",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/darkness%2Fcreatina-350%2F1-creatina.jpeg?alt=media&token=b25e76b5-fd26-4998-ac6a-65b3af648b69",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/darkness%2Fcreatina-350%2F1-creatina.jpeg?alt=media&token=b25e76b5-fd26-4998-ac6a-65b3af648b69",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/darkness%2Fcreatina-350%2F1-creatina.jpeg?alt=media&token=b25e76b5-fd26-4998-ac6a-65b3af648b69",
+        ],
+        basePrice: 189.9,
+        quantity: 10,
+        variation: [],
+        categoryId: creatinaCategory.id,
+        discountPercentage: 20, // 10% discount
       },
     ];
 
@@ -106,6 +178,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-choco-belga.webp?alt=media&token=828ff009-272c-41a8-84aa-5bef7ff711f1",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -122,6 +195,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco.webp?alt=media&token=e0d961b9-9911-4a3c-af68-de38699b8481",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -138,6 +212,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco-coco.jpg?alt=media&token=38c86ca2-a500-4078-b788-2031bcba342e",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -154,6 +229,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -170,6 +246,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -186,6 +263,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-doce-de-leite.jpg?alt=media&token=5806a649-b4ea-49ca-8eb6-029ea1012d0d",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -202,6 +280,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F4-cookies-all-black.jpg?alt=media&token=61d4af63-00bb-4862-8679-8d5b9bb70824",
         ],
         basePrice: 49.9,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
@@ -217,6 +296,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-creme-rock-zero-leite-em-po.jpeg?alt=media&token=2541212f-e052-4d2d-b119-388015c89b65",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -232,6 +312,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-creme-rock-zero-avela.jpeg?alt=media&token=c27789c6-780d-481e-b705-2897f1f955b4",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -248,6 +329,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -264,6 +346,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -280,6 +363,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -296,6 +380,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -312,6 +397,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
+        quantity: 10,
         variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
@@ -343,6 +429,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-choco-belga-rock.jpg?alt=media&token=f5637a5e-4c62-40c0-8247-dd18e3d29bf8",
         ],
         basePrice: 139.99,
+        quantity: 10,
         variation: [],
         categoryId: alfajorCategory.id,
         discountPercentage: 10, // 10% discount
@@ -359,6 +446,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-branco-rock.jpeg?alt=media&token=8e5b6790-52d9-47c6-a252-a9995b28529a",
         ],
         basePrice: 139.99,
+        quantity: 10,
         variation: [],
         categoryId: alfajorCategory.id,
         discountPercentage: 10, // 10% discount
@@ -375,6 +463,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=edbe972e-e75c-4996-9427-80f70c81be27",
         ],
         basePrice: 139.99,
+        quantity: 10,
         variation: [],
         categoryId: alfajorCategory.id,
         discountPercentage: 10, // 10% discount
@@ -395,6 +484,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-leite-em-po.webp?alt=media&token=d167d54c-34e9-4dc7-992b-a62f0de9ee37",
         ],
         basePrice: 139.99,
+        quantity: 10,
         variation: ["Leite em Pó", "Avelã", "Brigadeiro", "Chocolate Branco"],
         categoryId: alfajorCategory.id,
         discountPercentage: 15, // 10% discount
@@ -403,6 +493,219 @@ async function main() {
 
     await prisma.product.createMany({
       data: alfajorProducts,
+    });
+
+    const wheyCategory = await prisma.category.create({
+      data: {
+        name: "Whey Protein",
+        slug: "whey-protein",
+        imageUrl: "",
+      },
+    });
+
+    const wheyProducts = [
+      {
+        name: "WHEY PROTEIN CONCENTRADA - 900G Sabores",
+        slug: "whey-protein-concentrada-900g-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F900%2F163591-800-auto.webp?alt=media&token=37a7bdee-2c8b-45a8-86d6-2bd9bdcf279f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F900%2F163592-800-auto.webp?alt=media&token=e59d7884-534e-4bf6-9ebe-9575f70056c0",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F900%2F163593-800-auto.webp?alt=media&token=7d95c875-f3f7-4928-afd1-9d2f581372d0",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F900%2F163594-800-auto.webp?alt=media&token=f7cb5f90-f33b-451e-869f-8095af9912d2",
+        ],
+        basePrice: 189.9,
+        quantity: 10,
+        variation: [
+          "Banana",
+          "Baunilha",
+          "Butter Cookies",
+          "Cappuccino",
+          "Chocolate",
+          "Coco",
+          "Cookies",
+          "Morango",
+          "Sem Sabor",
+          "Pamonha",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "WHEY PROTEIN CONCENTRADA - Refil 1,8kg Sabores",
+        slug: "whey-protein-concentrada-refil-1-8kg-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F1-8-kg%2F1-whey-protein.webp?alt=media&token=754d41fe-31e6-40e3-80ff-1ee726eeb08f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F1-8-kg%2F2-whey-protein.webp?alt=media&token=0082b16a-0169-451e-af9e-1c219d8ea78a",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F1-8-kg%2F3-whey-protein.webp?alt=media&token=e631f613-c002-422c-b3a4-19e8ad966620",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F1-8-kg%2F4-whey-protein.webp?alt=media&token=4ab72913-4339-4e65-8f7f-a8af2c31d096",
+        ],
+        basePrice: 329.9,
+        quantity: 10,
+        variation: [
+          "Banana",
+          "Baunilha",
+          "Chocolate",
+          "Coco",
+          "Cookies",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "WHEY PROTEIN ISOLADA - 900g Sabores",
+        slug: "whey-protein-isolada-900g-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F900%2F1-whey-isolado.webp?alt=media&token=7e17b059-3c19-4fdb-a17e-0e4d5a1c7240",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F900%2F2-whey-isolado.webp?alt=media&token=39fd5081-5388-4aea-bd88-8587d3380e1a",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F900%2F3-whey-isolado.webp?alt=media&token=cd569d83-8500-4cd6-9610-393fc5394f2a",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F900%2F4-whey-isolado.webp?alt=media&token=503d8be0-f000-4e7f-8b22-2b9c2c61de93",
+        ],
+        basePrice: 329.9,
+        quantity: 10,
+        variation: ["Baunilha", "Cappuccino", "Coco", "Cookies", "Morango"],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "WHEY PROTEIN ISOLADA - Refil 1,8kg Sabores",
+        slug: "whey-protein-isolada-refil-1-8kg-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F1-8%2F1-whey-isolado.webp?alt=media&token=10b6e0ad-c831-498f-87a3-28afdca85406",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F1-8%2F2-whey-isolado.webp?alt=media&token=3d68383e-f3d5-411a-be96-e999c30a3b13",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F1-8%2F3-whey-isolado.webp?alt=media&token=7e573739-0f67-43ed-9c0d-178fc4b3d6ae",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F1-8%2F4-whey-isolado.webp?alt=media&token=9a59c8cc-194e-4480-8b58-e2bdfeb0ff19",
+        ],
+        basePrice: 489.9,
+        quantity: 10,
+        variation: ["Baunilha", "Chocolate", "Coco", "Cookies", "Morango"],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "WHEY 100% Pure Concentrado - Refil 900g Sabores",
+        slug: "whey-100-pure-concentrado-refil-900g-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure.png?alt=media&token=f8b16b62-75fc-417a-b54a-bb8d36406653",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure.png?alt=media&token=f8b16b62-75fc-417a-b54a-bb8d36406653",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure.png?alt=media&token=f8b16b62-75fc-417a-b54a-bb8d36406653",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure.png?alt=media&token=f8b16b62-75fc-417a-b54a-bb8d36406653",
+        ],
+        basePrice: 129.9,
+        quantity: 10,
+        variation: [
+          "Baunilha",
+          "Chocolate",
+          "Chocolate Maltado",
+          "Coco",
+          "Cookies",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "WHEY 100% Pure Concentrado - Pote 900g Sabores",
+        slug: "whey-100-pure-concentrado-pote-900g-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure-pote.png?alt=media&token=37df2452-479d-46f0-8988-7580762ad1dc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure-pote.png?alt=media&token=37df2452-479d-46f0-8988-7580762ad1dc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure-pote.png?alt=media&token=37df2452-479d-46f0-8988-7580762ad1dc",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure-pote.png?alt=media&token=37df2452-479d-46f0-8988-7580762ad1dc",
+        ],
+        basePrice: 159.9,
+        quantity: 10,
+        variation: [
+          "Baunilha",
+          "Chocolate",
+          "Chocolate Maltado",
+          "Coco",
+          "Cookies",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 15, // 10% discount
+      },
+      {
+        name: "Whey Grego 900g - Nutrata - Sabores",
+        slug: "whey-grego-900g-nutrata-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Nutrata%2Fwhey-900%2F1-whey-900.jpeg?alt=media&token=2e7e4710-724c-4ceb-a554-bdfbb2b8a759",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Nutrata%2Fwhey-900%2F2-whey-900.jpeg?alt=media&token=de29d6ed-1a3c-499c-b4a6-768abbf8cca3",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Nutrata%2Fwhey-900%2F1-whey-900.jpeg?alt=media&token=2e7e4710-724c-4ceb-a554-bdfbb2b8a759",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Nutrata%2Fwhey-900%2F2-whey-900.jpeg?alt=media&token=de29d6ed-1a3c-499c-b4a6-768abbf8cca3",
+        ],
+        basePrice: 169.9,
+        quantity: 10,
+        variation: [
+          "Beijinho",
+          "Brigadeiro",
+          "Chocolate",
+          "Churros",
+          "Coffee Cream Baunilha",
+          "Coffee Cream Caramelo",
+          "Coffee Cream Chocolate",
+          "Creme de Abacate",
+          "Havanna",
+          "Maracujá",
+          "Morango",
+          "Natural",
+          "Torta de Limão",
+          "Vitaminas de Frutas",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+    ];
+
+    await prisma.product.createMany({
+      data: wheyProducts,
+    });
+
+    const preTreinoCategory = await prisma.category.create({
+      data: {
+        name: "Pré Treinos",
+        slug: "pre-treinos",
+        imageUrl: "",
+      },
+    });
+
+    const preTreinosProducts = [
+      {
+        name: "PRE WORKOUT ORIGINAL - 300G Sabores",
+        slug: "pre-workout-original-300g-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fpre-treino%2F1-pre-treino-workout.webp?alt=media&token=933ed848-2c34-4990-9d94-79398f7eaf23",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fpre-treino%2F1-pre-treino-workout.webp?alt=media&token=933ed848-2c34-4990-9d94-79398f7eaf23",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fpre-treino%2F1-pre-treino-workout.webp?alt=media&token=933ed848-2c34-4990-9d94-79398f7eaf23",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fpre-treino%2F1-pre-treino-workout.webp?alt=media&token=933ed848-2c34-4990-9d94-79398f7eaf23",
+        ],
+        basePrice: 129.9,
+        quantity: 10,
+        variation: ["Pink Lemonade", "Guarana", "Cherry Bomb"],
+        categoryId: preTreinoCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+    ];
+
+    await prisma.product.createMany({
+      data: preTreinosProducts,
     });
 
     console.log("Seed completed successfully");
