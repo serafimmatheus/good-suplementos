@@ -18,7 +18,7 @@ interface ICheckout {
   totalPrice: number;
 }
 
-export const createCheckout = async (product: ICheckout[]) => {
+export const createCheckout = async (product: ICheckout[], orderId: String) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
     apiVersion: "2023-10-16",
   });
@@ -39,6 +39,9 @@ export const createCheckout = async (product: ICheckout[]) => {
   console.log(productMetadata);
 
   const checkout = await stripe.checkout.sessions.create({
+    metadata: {
+      orderId: orderId,
+    },
     payment_method_types: ["card", "boleto"],
     line_items: productMetadata,
     mode: "payment",

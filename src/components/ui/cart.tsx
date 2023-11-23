@@ -21,9 +21,9 @@ const Cart = () => {
       return;
     }
 
-    await createOrder(products, (session?.user as any).id);
+    const order = await createOrder(products, (session?.user as any).id);
 
-    const checkout = await createCheckout(products as any);
+    const checkout = await createCheckout(products as any, (order as any).id);
 
     // const { data: session, status } = useSession();
 
