@@ -12,4 +12,17 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.clientSecret,
     }),
   ],
+
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user = { ...session.user, id: user.id } as {
+        id: string;
+        name: string;
+        email: string;
+        image: string;
+      };
+      // return Promise.resolve(session);
+      return session;
+    },
+  },
 };

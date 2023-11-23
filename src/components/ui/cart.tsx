@@ -1,3 +1,5 @@
+"use client";
+
 import { ShoppingCartIcon } from "lucide-react";
 import { Badge } from "./badge";
 import { useCart } from "@/providers/cart";
@@ -7,12 +9,23 @@ import { ScrollArea } from "./scroll-area";
 import { Button } from "./button";
 import { createCheckout } from "@/actions/checkout";
 import { loadStripe } from "@stripe/stripe-js";
+import { useSession } from "next-auth/react";
+import { createOrder } from "@/actions/order";
 
 const Cart = () => {
+  const { data: session, status } = useSession();
   const { products, subTotal, totalDiscount, total } = useCart();
 
   const handleFinishCheckout = async () => {
-    const checkout = await createCheckout(products);
+    if (!session?.user) {
+      return;
+    }
+
+    await createOrder(products, (session?.user as any).id);
+
+    const checkout = await createCheckout(products as any);
+
+    // const { data: session, status } = useSession();
 
     const stripe = await loadStripe(
       process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string
