@@ -118,6 +118,12 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.setItem("@good-sup-ecomerce:cart", JSON.stringify(products));
   }, [products]);
 
+  useEffect(() => {
+    setProducts(
+      JSON.parse(localStorage.getItem("@fsw-store/cart-products") || "[]")
+    );
+  }, []);
+
   return (
     <CartContext.Provider
       value={{

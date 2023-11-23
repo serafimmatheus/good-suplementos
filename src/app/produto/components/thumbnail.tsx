@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Variant from "./variant";
 
 interface ThumbnailProps {
   product: ProductWithTotalPrice;
@@ -24,6 +25,7 @@ interface ThumbnailProps {
 const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [count, setCount] = useState(1);
+  const [variant, setVariant] = useState("");
 
   const { addProductToCart } = useCart();
 
@@ -84,28 +86,33 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
           <span className="text-primary text-xs">Disponível em estoque</span>
         </div>
 
-        <div className="flex flex-col">
-          <div className="flex gap-2">
-            <span className="text-xl font-semibold">
-              {product.totalPrice.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </span>
-            <Badge className="bg-primary text-xs">
-              <ArrowDownIcon size={16} />
-              {product.discountPercentage}%
-            </Badge>
+        <div className="flex justify-between">
+          <div className="flex flex-col">
+            <div className="flex gap-2">
+              <span className="text-xl font-semibold">
+                {product.totalPrice.toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </span>
+              <Badge className="bg-primary text-xs">
+                <ArrowDownIcon size={16} />
+                {product.discountPercentage}%
+              </Badge>
+            </div>
+
+            <div className="flex gap-1">
+              <p className="text-sm opacity-60">de </p>
+              <p className="text-sm opacity-60 line-through">
+                {Number(product.basePrice).toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </p>
+            </div>
           </div>
-          <div className="flex gap-1">
-            <p className="text-sm opacity-60">de </p>
-            <p className="text-sm opacity-60 line-through">
-              {Number(product.basePrice).toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </p>
-          </div>
+
+          <Variant variants={product.variation} selectedVariant={setVariant} />
         </div>
 
         <div className="flex gap-4 items-center">

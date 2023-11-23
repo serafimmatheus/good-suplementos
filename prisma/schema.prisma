@@ -32,27 +32,25 @@ model Product {
   discountPercentage Int      @default(0)
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
+  variation          String[]
 
   categoryId String
   category   Category @relation(fields: [categoryId], references: [id])
 
-  variationId String?
-  variation   Variation? @relation(fields: [variationId], references: [id])
-
   @@map("products")
 }
 
-model Variation {
-  id        String    @id @default(uuid())
-  name      String
-  slug      String    @unique
-  value     String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  Product   Product[]
+// model Variation {
+//   id        String    @id @default(uuid())
+//   name      String
+//   slug      String    @unique
+//   value     String
+//   createdAt DateTime  @default(now())
+//   updatedAt DateTime  @updatedAt
+//   Product   Product[]
 
-  @@map("variations")
-}
+//   @@map("variations")
+// }
 
 model Account {
   id                String  @id @default(cuid())
