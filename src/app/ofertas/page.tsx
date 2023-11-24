@@ -1,6 +1,7 @@
 import { totalPriceDiscount } from "@/helpers/total-price-discount";
 import { prismaClient } from "@/lib/prisma";
 import ProductItemCategory from "../categoria/[slug]/components/product-item";
+import Container from "@/components/ui/container";
 
 const DealsPage = async () => {
   const deals = await prismaClient.product.findMany({
@@ -16,7 +17,8 @@ const DealsPage = async () => {
       <div className="mb-5">
         <h2 className="text-xl font-semibold">Ofertas da semana</h2>
       </div>
-      <div className="grid grid-cols-2 items-center justify-between gap-x-2 gap-y-4 lg:grid-cols-3 ">
+
+      <Container className="items-center justify-between gap-x-2 gap-y-4">
         {deals.map((product) => {
           return (
             <ProductItemCategory
@@ -25,7 +27,7 @@ const DealsPage = async () => {
             />
           );
         })}
-      </div>
+      </Container>
     </div>
   );
 };

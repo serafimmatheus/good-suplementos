@@ -4,6 +4,7 @@ import { prismaClient } from "@/lib/prisma";
 import { ShapesIcon } from "lucide-react";
 import ProductItemCategory from "./components/product-item";
 import { CATEGORY_ICON } from "@/helpers/constants";
+import Container from "@/components/ui/container";
 
 const CategoryPage = async ({ params }: any) => {
   const products = await prismaClient.product.findMany({
@@ -19,7 +20,7 @@ const CategoryPage = async ({ params }: any) => {
   });
 
   return (
-    <main className="py-8 px-5">
+    <main className="py-8 px-5 max-w-5xl mx-auto">
       <Badge
         variant="outline"
         className="gap-2 px-4 py-2 text-sm uppercase border-2 border-primary"
@@ -28,14 +29,14 @@ const CategoryPage = async ({ params }: any) => {
         {params.slug}
       </Badge>
 
-      <div className="grid grid-cols-2 gap-4 py-8">
+      <Container className="gap-4 py-8">
         {products.map((product) => (
           <ProductItemCategory
             key={product.id}
             product={totalPriceDiscount(product)}
           />
         ))}
-      </div>
+      </Container>
     </main>
   );
 };

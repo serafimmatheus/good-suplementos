@@ -1,16 +1,17 @@
 import {
-  HeadphonesIcon,
-  KeyboardIcon,
-  MonitorIcon,
+  BadgePercentIcon,
+  BadgePlusIcon,
+  CookieIcon,
+  DumbbellIcon,
   MouseIcon,
-  SpeakerIcon,
+  UtensilsCrossedIcon,
 } from "lucide-react";
 
 export const CATEGORY_ICON = {
-  creatinas: <KeyboardIcon size={16} />,
-  "pasta-de-amendoim": <MonitorIcon size={16} />,
-  alfajor: <HeadphonesIcon size={16} />,
-  "whey-protein": <SpeakerIcon size={16} />,
-  "pre-treinos": <MouseIcon size={16} />,
+  creatinas: <BadgePercentIcon size={16} />,
+  "pasta-de-amendoim": <UtensilsCrossedIcon size={16} />,
+  alfajor: <CookieIcon size={16} />,
+  "whey-protein": <DumbbellIcon size={16} />,
+  "pre-treinos": <BadgePlusIcon size={16} />,
   mousepads: <MouseIcon size={16} />,
 };

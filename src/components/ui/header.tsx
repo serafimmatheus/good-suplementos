@@ -106,16 +106,18 @@ const Header = () => {
                 </Link>
               </SheetClose>
 
-              <Link href="/ofertas">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="w-full gap-2 justify-start px-2"
-                >
-                  <PercentIcon size={16} />
-                  Ofertas
-                </Button>
-              </Link>
+              <SheetClose asChild>
+                <Link href="/ofertas">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="w-full gap-2 justify-start px-2"
+                  >
+                    <PercentIcon size={16} />
+                    Ofertas
+                  </Button>
+                </Link>
+              </SheetClose>
 
               <SheetClose asChild>
                 <Link href="/catalogo">
@@ -129,6 +131,21 @@ const Header = () => {
                   </Button>
                 </Link>
               </SheetClose>
+
+              {status === "authenticated" && (
+                <SheetClose asChild>
+                  <Link href="/meus-pedidos">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="w-full gap-2 justify-start px-2"
+                    >
+                      <ListOrderedIcon size={16} />
+                      Meus pedidos
+                    </Button>
+                  </Link>
+                </SheetClose>
+              )}
             </div>
           </SheetContent>
         </Sheet>
