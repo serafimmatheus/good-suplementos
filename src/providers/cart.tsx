@@ -12,6 +12,7 @@ import React, {
 export interface CartProduct extends Product {
   quantity: number;
   totalPrice: number;
+  selectedVariation: string;
 }
 
 interface ICartContext {
@@ -23,8 +24,12 @@ interface ICartContext {
   total: number;
   totalDiscount: number;
   addProductToCart: (product: CartProduct) => void;
-  decreaseQuantity: (productId: string) => void;
-  incrementQuantity: (productId: string) => void;
+  decreaseQuantity: (productId: string, selectedVariation: string) => void;
+  incrementQuantity: (
+    productId: string,
+    selectedVariation: string,
+    stock: Number
+  ) => void;
   deleteProduct: (productId: string) => void;
 }
 
@@ -63,12 +68,16 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   const addProductToCart = (product: CartProduct) => {
     const productAlreadyInCart = products.find(
-      (p) => p.id === product.id
+      (p) =>
+        p.id === product.id && p.selectedVariation === product.selectedVariation
     ) as CartProduct;
 
     if (productAlreadyInCart) {
       const updatedProducts = products.map((p) => {
-        if (p.id === product.id) {
+        if (
+          p.id === product.id &&
+          p.selectedVariation === product.selectedVariation
+        ) {
           return {
             ...p,
             quantity: p.quantity + product.quantity,
@@ -79,15 +88,25 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
       setProducts(updatedProducts);
     } else {
-      setProducts([...products, { ...product, quantity: product.quantity }]);
+      setProducts([
+        ...products,
+        {
+          ...product,
+          quantity: product.quantity,
+          selectedVariation: product.selectedVariation,
+        },
+      ]);
     }
   };
 
-  const decreaseQuantity = (productId: string) => {
+  const decreaseQuantity = (productId: string, selectedVariation: string) => {
     setProducts((prev) =>
       prev
         .map((cartProduct) => {
-          if (cartProduct.id === productId) {
+          if (
+            cartProduct.id === productId &&
+            cartProduct.selectedVariation === selectedVariation
+          ) {
             return { ...cartProduct, quantity: cartProduct.quantity - 1 };
           }
 
@@ -97,11 +116,24 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     );
   };
 
-  const incrementQuantity = (productId: string) => {
+  const incrementQuantity = (
+    productId: string,
+    selectedVariation: string,
+    stock: Number
+  ) => {
     setProducts((prev) =>
       prev.map((cartProduct) => {
-        if (cartProduct.id === productId) {
-          return { ...cartProduct, quantity: cartProduct.quantity + 1 };
+        if (
+          cartProduct.id === productId &&
+          cartProduct.selectedVariation === selectedVariation
+        ) {
+          return {
+            ...cartProduct,
+            quantity:
+              cartProduct.quantity >= Number(stock)
+                ? cartProduct.quantity
+                : cartProduct.quantity + 1,
+          };
         }
 
         return cartProduct;

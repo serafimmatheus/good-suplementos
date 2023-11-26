@@ -16,10 +16,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
           width={0}
           height={0}
           sizes="100vw"
-          className="w-[70%] items-center justify-center"
-          style={{
-            objectFit: "cover",
-          }}
+          className="w-[80%] h-[80%] items-center justify-center object-contain"
         />
       </div>
 

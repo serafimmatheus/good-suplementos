@@ -1,5 +1,5 @@
 "use server";
-import { CartProduct } from "@/providers/cart";
+
 import Stripe from "stripe";
 
 interface ICheckout {
@@ -16,6 +16,7 @@ interface ICheckout {
   variation: string[];
   quantity: number;
   totalPrice: number;
+  selectedVariation: string;
 }
 
 export const createCheckout = async (product: ICheckout[], orderId: String) => {
@@ -27,7 +28,7 @@ export const createCheckout = async (product: ICheckout[], orderId: String) => {
     price_data: {
       currency: "brl",
       product_data: {
-        name: product.name,
+        name: `${product.name} - ${product.selectedVariation}`,
         images: product.imageUrls,
         description: product.description,
       },
@@ -35,8 +36,6 @@ export const createCheckout = async (product: ICheckout[], orderId: String) => {
     },
     quantity: product.quantity,
   }));
-
-  console.log(productMetadata);
 
   const checkout = await stripe.checkout.sessions.create({
     metadata: {
@@ -47,6 +46,7 @@ export const createCheckout = async (product: ICheckout[], orderId: String) => {
     mode: "payment",
     success_url: process.env.HOST_URL,
     cancel_url: process.env.HOST_URL,
+    billing_address_collection: "required",
   });
 
   return checkout;

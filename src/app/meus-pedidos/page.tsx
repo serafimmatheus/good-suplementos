@@ -36,7 +36,7 @@ const MeusPedidos = async () => {
       </Badge>
 
       <div className="flex flex-col gap-5 mt-8">
-        {orders.map((order) => (
+        {orders.reverse().map((order) => (
           <OrderItem key={order.id} order={order}></OrderItem>
         ))}
       </div>

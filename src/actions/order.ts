@@ -15,6 +15,7 @@ const createOrder = async (cardProducts: CartProduct[], userId: string) => {
             discountPercentage: product.discountPercentage,
             productId: product.id,
             quantity: product.quantity,
+            selectedVariation: product.selectedVariation,
           })),
         },
       },

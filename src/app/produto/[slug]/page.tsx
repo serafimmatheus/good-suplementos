@@ -29,7 +29,7 @@ const ProductPage = async ({ params }: any) => {
   return (
     <div className="max-w-5xl mx-auto">
       <Thumbnail
-        product={totalPriceDiscount(product)}
+        product={totalPriceDiscount(product, "")}
         productRelation={product.category.products}
       />
     </div>

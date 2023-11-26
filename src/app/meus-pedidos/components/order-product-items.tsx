@@ -1,5 +1,5 @@
 import { totalPriceDiscount } from "@/helpers/total-price-discount";
-import { OrderProduct, Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import Image from "next/image";
 
 interface OrderProductsItemProps {
@@ -8,10 +8,18 @@ interface OrderProductsItemProps {
       product: true;
     };
   }>;
+
+  variation: string;
 }
 
-const OrderProductsItem = ({ orderProduct }: OrderProductsItemProps) => {
-  const productTotalPriceDiscount = totalPriceDiscount(orderProduct.product);
+const OrderProductsItem = ({
+  orderProduct,
+  variation,
+}: OrderProductsItemProps) => {
+  const productTotalPriceDiscount = totalPriceDiscount(
+    orderProduct.product,
+    variation
+  );
 
   return (
     <div className="flex items-center gap-4">
@@ -32,22 +40,24 @@ const OrderProductsItem = ({ orderProduct }: OrderProductsItemProps) => {
             Vendido e entregue por <span className="text-primary">GOOD</span>
           </p>
         </div>
-        <p className="font-bold text-xs">{orderProduct.product.name}</p>
+        <p className="font-bold text-xs">
+          {orderProduct.product.name} - {orderProduct.selectedVariation}
+        </p>
         <div className="flex items-center gap-2">
           <p className="text-primary font-bold">
-            {Number(
-              productTotalPriceDiscount.totalPrice * orderProduct.quantity
-            ).toLocaleString("pt-br", {
-              style: "currency",
-              currency: "BRL",
-            })}
+            {Number(productTotalPriceDiscount.totalPrice).toLocaleString(
+              "pt-br",
+              {
+                style: "currency",
+                currency: "BRL",
+              }
+            )}
           </p>
 
           {productTotalPriceDiscount.discountPercentage > 0 && (
             <p className="text-xs line-through opacity-70">
               {Number(
-                (productTotalPriceDiscount.basePrice as any) *
-                  orderProduct.quantity
+                productTotalPriceDiscount.basePrice as any
               ).toLocaleString("pt-br", {
                 style: "currency",
                 currency: "BRL",

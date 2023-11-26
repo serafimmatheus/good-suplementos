@@ -3,6 +3,8 @@ import { prismaClient } from "@/lib/prisma";
 import ProductList from "./components/product-list";
 import TextTitleBase from "@/components/ui/text-title-base";
 import PromoBanner from "./components/promo-banner";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   const deals = await prismaClient.product.findMany({
@@ -13,10 +15,10 @@ export default async function Home() {
     },
   });
 
-  const alfajors = await prismaClient.product.findMany({
+  const wheyProtein = await prismaClient.product.findMany({
     where: {
       category: {
-        slug: "alfajor",
+        slug: "whey-protein",
       },
     },
   });
@@ -30,39 +32,83 @@ export default async function Home() {
   });
 
   return (
-    <main className="py-8 max-w-5xl mx-auto">
+    <main className="py-8 lg:pt-0">
       <PromoBanner
-        src="/banner-home-desconto.png"
+        src="/banner-20off-mobile.png"
         alt="até 55% de desconto esse mês"
       />
 
-      <div className="mt-8 px-5 ">
-        <Categories />
-      </div>
-
-      <div className="my-8">
-        <TextTitleBase>Ofertas da semana</TextTitleBase>
-        <ProductList products={deals} />
-      </div>
-
-      <PromoBanner
-        src="/banner-home-mouses.png"
-        alt="até 55% de desconto em mouses"
+      <Image
+        src="/banner-ofertas-desktop.png"
+        alt="alt"
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="w-full h-[450px] hidden lg:block object-cover"
       />
 
-      <div className="my-8">
-        <TextTitleBase>Alfajors</TextTitleBase>
-        <ProductList products={alfajors} />
-      </div>
+      <div className="flex flex-col max-w-6xl mx-auto">
+        <div className="mt-8 px-5 ">
+          <Categories />
+        </div>
 
-      <PromoBanner
-        src="/banner-home-fones.png"
-        alt="até 20% de desconto em fones"
-      />
+        <div className="my-8">
+          <TextTitleBase>Ofertas da semana</TextTitleBase>
+          <ProductList products={deals} />
+        </div>
 
-      <div className="my-8">
-        <TextTitleBase>Creatinas</TextTitleBase>
-        <ProductList products={creatina} />
+        <PromoBanner
+          src="/banner-creatinas-mobile.png"
+          alt="até 20% de desconto em fones"
+        />
+
+        <div className="grid-cols-2 gap-10 py-20 hidden lg:grid">
+          <Link href="/categoria/pasta-de-amendoim">
+            <Image
+              src="/banner-pasta-de-amendoim.png"
+              alt="até 55% de desconto em mouses"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full object-cover"
+            />
+          </Link>
+
+          <Link href="/categoria/creatinas">
+            <Image
+              src="/banner-creatinas.png"
+              alt="até 55% de desconto em mouses"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full object-cover"
+            />
+          </Link>
+        </div>
+
+        <div className="my-8">
+          <TextTitleBase>Whey Protein</TextTitleBase>
+          <ProductList products={wheyProtein} />
+        </div>
+
+        <PromoBanner
+          src="/banner-pasta-de-amendoim-mobile.png"
+          alt="até 20% de desconto em fones"
+        />
+
+        <Image
+          src="/banner-frete.png"
+          alt="até 55% de desconto em mouses"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full hidden lg:block object-cover py-20"
+        />
+
+        <div className="my-8">
+          <TextTitleBase>Creatinas</TextTitleBase>
+          <ProductList products={creatina} />
+        </div>
       </div>
     </main>
   );

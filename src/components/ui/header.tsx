@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   return (
-    <Card className="py-8 px-5">
+    <Card className="py-8 px-5 lg:hidden">
       <div className="max-w-5xl mx-auto flex justify-between items-center ">
         <Sheet>
           <SheetTrigger asChild>

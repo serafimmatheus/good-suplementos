@@ -27,6 +27,8 @@ const Cart = () => {
 
     const checkout = await createCheckout(products as any, (order as any).id);
 
+    console.log(checkout);
+
     // const { data: session, status } = useSession();
 
     const stripe = await loadStripe(
@@ -53,7 +55,10 @@ const Cart = () => {
               products.map((product) => (
                 <CartItem
                   key={product.id}
-                  product={totalPriceDiscount(product)}
+                  product={totalPriceDiscount(
+                    product,
+                    product.selectedVariation
+                  )}
                   quantity={product.quantity}
                 />
               ))

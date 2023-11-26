@@ -27,7 +27,7 @@ const CartItem = ({ product, quantity }: CartItemProps) => {
 
         <div className="flex flex-col w-full">
           <p className="text-xs overflow-hidden text-ellipsis">
-            {product.name}
+            {product.name} - {product.selectedVariation}
           </p>
 
           <div className="flex gap-2">
@@ -48,7 +48,9 @@ const CartItem = ({ product, quantity }: CartItemProps) => {
           <div className="flex gap-4 items-center">
             <div
               className="border p-2 rounded-lg"
-              onClick={() => decreaseQuantity(product.id)}
+              onClick={() =>
+                decreaseQuantity(product.id, product.selectedVariation)
+              }
             >
               <ArrowLeftIcon size={16} />
             </div>
@@ -56,7 +58,13 @@ const CartItem = ({ product, quantity }: CartItemProps) => {
 
             <div
               className="border p-2 rounded-lg "
-              onClick={() => incrementQuantity(product.id)}
+              onClick={() =>
+                incrementQuantity(
+                  product.id,
+                  product.selectedVariation,
+                  product.stock
+                )
+              }
             >
               <ArrowRightIcon size={16} />
             </div>
