@@ -8,7 +8,8 @@ async function main() {
       data: {
         name: "Creatina",
         slug: "creatinas",
-        imageUrl: "",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-creatina.png?alt=media&token=ef698833-fc42-4930-b241-b6d291d37f3e",
       },
     });
 
@@ -26,7 +27,7 @@ async function main() {
         ],
         variation: [],
         basePrice: 150,
-        quantity: 10,
+        stock: 10,
         categoryId: creatinaCategory.id,
         discountPercentage: 7, // 10% discount
       },
@@ -43,7 +44,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/max-titanium%2Fcreatina%2F150%2F2-creatina.webp?alt=media&token=809e8fed-c586-4552-8525-2349b47060d5",
         ],
         basePrice: 105,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 7, // 10% discount
@@ -61,7 +62,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fcreatina%2F300%2F4-creatina-dux-300g.webp?alt=media&token=507cf2f6-848c-49a4-90fb-e072f0c68f2e",
         ],
         basePrice: 160,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 10, // 10% discount
@@ -78,7 +79,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F2-creatina.webp?alt=media&token=d66945ce-2811-4d7f-9a08-0a40a7e141af",
         ],
         basePrice: 77.99,
-        quantity: 0,
+        stock: 0,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 10, // 10% discount
@@ -95,7 +96,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F1kg%2F2-creatina.jpeg?alt=media&token=9f1d24e7-cd32-4afe-82a6-1eaa26019b07",
         ],
         basePrice: 379.9,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 0, // 10% discount
@@ -112,7 +113,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F300g%2F2-creatina.webp?alt=media&token=6c2ad17a-76db-4f49-87ac-db8a797a17f7",
         ],
         basePrice: 159.9,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 9, // 10% discount
@@ -129,7 +130,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fcreatina%2F150g%2F1-creatina.webp?alt=media&token=a480c0f7-c7d9-4135-9ec8-415e4fa34eaa",
         ],
         basePrice: 89.9,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 5, // 10% discount
@@ -146,10 +147,27 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/darkness%2Fcreatina-350%2F1-creatina.jpeg?alt=media&token=b25e76b5-fd26-4998-ac6a-65b3af648b69",
         ],
         basePrice: 189.9,
-        quantity: 10,
+        stock: 10,
         variation: [],
         categoryId: creatinaCategory.id,
         discountPercentage: 20, // 10% discount
+      },
+      {
+        name: "Creatina 300g - Probiótica Monohidratada",
+        slug: "creatina-300g-probiotica-monohidratada",
+        description:
+          "Melhora a performance nos treinos;Aumenta a massa muscular magra;Aumenta a força e a resistência;Melhora a recuperação muscular;Aumenta a hidratação celular;Melhora a volumização muscular;Aumenta a energia",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fcreatina-300g%2F1-creatina.png?alt=media&token=1fccec4a-e491-42b2-9893-e98569b6090d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fcreatina-300g%2F2-creatina.png?alt=media&token=d09b0c2e-cedb-48e9-85f4-20bac412ba5b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fcreatina-300g%2F3-creatina.png?alt=media&token=633411df-ea36-496a-ad77-b8ae45b891f8",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fcreatina-300g%2F1-creatina.png?alt=media&token=1fccec4a-e491-42b2-9893-e98569b6090d",
+        ],
+        basePrice: 159.9,
+        stock: 10,
+        variation: [],
+        categoryId: creatinaCategory.id,
+        discountPercentage: 8, // 10% discount
       },
     ];
 
@@ -161,14 +179,15 @@ async function main() {
       data: {
         name: "Pasta de Amendoim",
         slug: "pasta-de-amendoim",
-        imageUrl: "",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-pasta-chocotine.png?alt=media&token=579ede91-4b9f-48a9-bb87-4a5fe3159fd4",
       },
     });
 
     const pastasDeAmendoim = [
       {
-        name: "Pasta de Amendoim - 500g - Chocolate Belga - Rock Peanut",
-        slug: "pasta-de-amendoim-500g-chocolate-belga-rock-peanut",
+        name: "Pasta de Amendoim 500g - Rock Peanut - Sabores",
+        slug: "pastas-de-amendoim-500g-rock-peanut-sabores",
         description:
           "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
         imageUrls: [
@@ -178,116 +197,22 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-choco-belga.webp?alt=media&token=828ff009-272c-41a8-84aa-5bef7ff711f1",
         ],
         basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Pasta de Amendoim - 500g - Chocolate Branco - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-chocolate-branco-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco.webp?alt=media&token=03179df0-caac-4c8a-890f-c0f5f5b4f437",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco.webp?alt=media&token=e0d961b9-9911-4a3c-af68-de38699b8481",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco.webp?alt=media&token=03179df0-caac-4c8a-890f-c0f5f5b4f437",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco.webp?alt=media&token=e0d961b9-9911-4a3c-af68-de38699b8481",
+        stock: 10,
+        variation: [
+          "Chocolate Belga",
+          "Chocolate Branco",
+          "Chocolate Branco c/coco",
+          "Chocolate c/coco",
+          "Doce de Leite",
+          "Cookies All Black",
         ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 0, // 10% discount
       },
+
       {
-        name: "Pasta de Amendoim - 500g - Chocolate Branco c/coco - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-chocolate-branco-c-coco-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco-coco.jpg?alt=media&token=7d6179a6-05eb-476c-be19-5ac885c940a3",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco-coco.jpg?alt=media&token=38c86ca2-a500-4078-b788-2031bcba342e",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-branco-coco.jpg?alt=media&token=7d6179a6-05eb-476c-be19-5ac885c940a3",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-branco-coco.jpg?alt=media&token=38c86ca2-a500-4078-b788-2031bcba342e",
-        ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Pasta de Amendoim - 500g - Chocolate c/coco - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-chocolate-c-coco-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-coco.webp?alt=media&token=02591f73-10c0-44e1-a066-9d4dd94115cc",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
-        ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Pasta de Amendoim - 500g - Chocolate c/coco - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-chocolate-choco-c-coco-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-chocolate-coco.webp?alt=media&token=02591f73-10c0-44e1-a066-9d4dd94115cc",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-chocolate-coco.webp?alt=media&token=25da55c4-b0bc-43b9-a01a-c78d09ffd73f",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-chocolate-coco.webp?alt=media&token=247a2a11-7895-4800-9d7d-e869689cad91",
-        ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Pasta de Amendoim - 500g - Doce de leite - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-doce-de-leite-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-doce-de-leite.jpeg?alt=media&token=7527984e-a8fe-431f-81a9-915087826e05",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-doce-de-leite.jpg?alt=media&token=5806a649-b4ea-49ca-8eb6-029ea1012d0d",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-doce-de-leite.jpeg?alt=media&token=7527984e-a8fe-431f-81a9-915087826e05",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-doce-de-leite.jpg?alt=media&token=5806a649-b4ea-49ca-8eb6-029ea1012d0d",
-        ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "Pasta de Amendoim - 500g - Cookies All Black - Rock Peanut",
-        slug: "pastas-de-amendoim-500g-cookies-all-black-rock-peanut",
-        description:
-          "Ingredientes Naturais e Integrais;Zero açúcar;Zero Glúten;Fonte Natural de Proteínas;Qualidade e Sabor Garantido;",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-cookies-all-black.jpg?alt=media&token=3e3bfc4f-31ff-48a7-afa0-9c039f504744",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-cookies-all-black.jpg?alt=media&token=5c5f5491-39d6-4a55-94e6-073849b598a3",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-cookies-all-black.jpg?alt=media&token=ceba4b1b-40d4-43af-8e77-1d84af539402",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F4-cookies-all-black.jpg?alt=media&token=61d4af63-00bb-4862-8679-8d5b9bb70824",
-        ],
-        basePrice: 49.9,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 0, // 10% discount
-      },
-      {
-        name: "ROCK CREME 500G ZERO - Leite EM PÓ",
-        slug: "rock-creme-500g-zero-leite-em-po",
+        name: "ROCK CREME 500G ZERO - Sabores",
+        slug: "rock-creme-500g-zero-sabores",
         description: "",
         imageUrls: [
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-creme-rock-zero-leite-em-po.jpeg?alt=media&token=35f6774e-8f70-451f-aad8-339c772e58f3",
@@ -296,30 +221,15 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-creme-rock-zero-leite-em-po.jpeg?alt=media&token=2541212f-e052-4d2d-b119-388015c89b65",
         ],
         basePrice: 55.77,
-        quantity: 10,
-        variation: [],
+        stock: 10,
+        variation: ["Leite EM PÓ", "Avelã"],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
       },
+
       {
-        name: "ROCK CREME 500G ZERO - ROCK PEANUT Leite EM PÓ Rock",
-        slug: "rock-creme-500g-zero-avela",
-        description: "",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-creme-rock-zero-avela.jpeg?alt=media&token=aa4fa84e-4e45-419c-b1a3-68c085fb3bf7",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F2-creme-rock-zero-avela.jpeg?alt=media&token=4a90ae2b-b8ba-4e12-92f0-2c9650834f70",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F1-creme-rock-zero-avela.jpeg?alt=media&token=aa4fa84e-4e45-419c-b1a3-68c085fb3bf7",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Fpasta-de-amendoim%2F3-creme-rock-zero-avela.jpeg?alt=media&token=c27789c6-780d-481e-b705-2897f1f955b4",
-        ],
-        basePrice: 55.77,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Pasta De Amendoim Avelã Com Whey Isolado 600g - Dr Peanut",
-        slug: "pastas-de-amendoim-600g-avela-com-whey-isolado-dr-peanut",
+        name: "Pasta De Amendoim Com Whey Isolado 600g - Dr Peanut - Sabores",
+        slug: "pasta-de-amendoim-com-whey-isolado-600g-dr-peanut-sabores",
         description:
           "O Melhor Sabor do mercado;Com Whey Protein Isolado;Zero Açúcar;Zero Gluten;Zero Gordura Trans",
         imageUrls: [
@@ -329,78 +239,36 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
         ],
         basePrice: 55.77,
-        quantity: 10,
-        variation: [],
+        stock: 10,
+        variation: ["Avelã", "CHOCOTINE", "Brownie", "CHOCOCO", "PAÇOCA"],
         categoryId: pastaAmendoimCategory.id,
         discountPercentage: 10, // 10% discount
       },
+
       {
-        name: "Pasta De Amendoim CHOCOTINE Com Whey Isolado 600g - Dr Peanut",
-        slug: "pastas-de-amendoim-600g-chocotine-com-whey-isolado-dr-peanut",
+        name: "Pasta de Amendoim Integral Shot Protein (1kg) VitaPower",
+        slug: "pastas-de-amendoim-1kg-integral-shot-protein-vitapower",
         description:
           "O Melhor Sabor do mercado;Com Whey Protein Isolado;Zero Açúcar;Zero Gluten;Zero Gordura Trans",
         imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-chocotine.webp?alt=media&token=515779b8-4a93-45fb-9e06-f3a26e387fcf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-chocotine.webp?alt=media&token=515779b8-4a93-45fb-9e06-f3a26e387fcf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/via-power%2Fpasta-de-amendoim%2F2-pasta-de-amendoim-1kg.webp?alt=media&token=a19300ab-0017-4788-958d-af2e22ecf455",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/via-power%2Fpasta-de-amendoim%2F1-pasta-de-amendoim-1kg.jpeg?alt=media&token=d27ae52d-51fe-4e90-ae73-ad794d1cd50f",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/via-power%2Fpasta-de-amendoim%2F3-pasta-de-amendoim-1kg.jpeg?alt=media&token=40fcba0e-2aa5-4f8c-9942-8e89d8b3e194",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/via-power%2Fpasta-de-amendoim%2F4-pasta-de-amendoim-1kg.jpeg?alt=media&token=35809b89-897a-4d36-a776-0932ae4f1046",
         ],
-        basePrice: 55.77,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Pasta De Amendoim Brownie Com Whey Isolado 600g - Dr Peanut",
-        slug: "pastas-de-amendoim-600g-brownie-com-whey-isolado-dr-peanut",
-        description:
-          "O Melhor Sabor do mercado;Com Whey Protein Isolado;Zero Açúcar;Zero Gluten;Zero Gordura Trans",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-brownie.webp?alt=media&token=16f02795-1bf9-4d6a-b4bd-438445dc7b76",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-brownie.webp?alt=media&token=16f02795-1bf9-4d6a-b4bd-438445dc7b76",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
+        basePrice: 59.9,
+        stock: 10,
+        variation: [
+          "Beiijinho",
+          "Brownie",
+          "Blank Protein",
+          "Cookies",
+          "Press Cream",
+          "Beez Branco",
+          "Shot Protein",
         ],
-        basePrice: 55.77,
-        quantity: 10,
-        variation: [],
         categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Pasta De Amendoim CHOCOCO Com Whey Isolado 600g - Dr Peanut",
-        slug: "pastas-de-amendoim-600g-chococo-com-whey-isolado-dr-peanut",
-        description:
-          "O Melhor Sabor do mercado;Com Whey Protein Isolado;Zero Açúcar;Zero Gluten;Zero Gordura Trans",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-chococo.webp?alt=media&token=36466963-a5c0-46a9-9ae6-a8cea593c287",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-chococo.webp?alt=media&token=36466963-a5c0-46a9-9ae6-a8cea593c287",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-        ],
-        basePrice: 55.77,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Pasta De Amendoim PAÇOCA Com Whey Isolado 600g - Dr Peanut",
-        slug: "pastas-de-amendoim-600g-pacoca-com-whey-isolado-dr-peanut",
-        description:
-          "O Melhor Sabor do mercado;Com Whey Protein Isolado;Zero Açúcar;Zero Gluten;Zero Gordura Trans",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-pacoca.webp?alt=media&token=df661725-a3ab-4be8-b278-7621158d5b3e",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F1-pasta-pacoca.webp?alt=media&token=df661725-a3ab-4be8-b278-7621158d5b3e",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Fpasta-de-amendoim%2F2-pasta-choco-branco.jpg?alt=media&token=73fdfd54-e3fe-4635-a45e-9446d3b07ccf",
-        ],
-        basePrice: 55.77,
-        quantity: 10,
-        variation: [],
-        categoryId: pastaAmendoimCategory.id,
-        discountPercentage: 10, // 10% discount
+        discountPercentage: 0, // 10% discount
       },
     ];
 
@@ -412,14 +280,15 @@ async function main() {
       data: {
         name: "Alfajor",
         slug: "alfajor",
-        imageUrl: "",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-avela.png?alt=media&token=9ab815a2-d44f-433c-b4c6-9d4d4e8801f5",
       },
     });
 
     const alfajorProducts = [
       {
-        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades Chocolate Belga",
-        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-chocolate-belga",
+        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades - Sabores",
+        slug: "alfafor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-sabores",
         description:
           "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
         imageUrls: [
@@ -429,45 +298,12 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-choco-belga-rock.jpg?alt=media&token=f5637a5e-4c62-40c0-8247-dd18e3d29bf8",
         ],
         basePrice: 139.99,
-        quantity: 10,
-        variation: [],
+        stock: 10,
+        variation: ["Chocolate Belga", "Chocolate Branco", "LEITE EM PÓ"],
         categoryId: alfajorCategory.id,
         discountPercentage: 10, // 10% discount
       },
-      {
-        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades Chocolate Branco",
-        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-chocolate-branco",
-        description:
-          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F1-alfajor-choco-branco-rock.jpeg?alt=media&token=84dcf994-bae7-447b-9bd4-d724b521f6b7",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F2-alfajor-choco-branco-rock.jpeg?alt=media&token=f892b99a-f914-487b-8a9b-ea1d7905cb28",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-branco-rock.jpeg?alt=media&token=d1b03a34-a468-4430-97df-6611c286a1b7",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-choco-branco-rock.jpeg?alt=media&token=8e5b6790-52d9-47c6-a252-a9995b28529a",
-        ],
-        basePrice: 139.99,
-        quantity: 10,
-        variation: [],
-        categoryId: alfajorCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
-      {
-        name: "Alfajor Fit C/Whey Protein Rock Peanut Cracker Monster C/12 Unidades LEITE EM PÓ",
-        slug: "alfajor-fit-c-whey-protein-rock-peanut-cracker-monster-c-12-unidades-leite-em-po",
-        description:
-          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
-        imageUrls: [
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F1-alfajor-cream-leite-em-po-rock.jpg?alt=media&token=7b38c9ac-0085-4ac8-a4c1-b18cb552b825",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F2-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=8db076ac-1eb8-4803-a25e-8883b2f69960",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F3-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=9ae02d53-5424-49a9-8087-338b11cb4b4d",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/rock%2Falfajor%2F4-alfajor-cream-leite-em-po-rock.jpeg?alt=media&token=edbe972e-e75c-4996-9427-80f70c81be27",
-        ],
-        basePrice: 139.99,
-        quantity: 10,
-        variation: [],
-        categoryId: alfajorCategory.id,
-        discountPercentage: 10, // 10% discount
-      },
+
       {
         name: "ALFAJOR 55G (DISPLAY C/ 12 UNIDS) - DR. PEANUT",
         slug: "alfajor-55g-display-c-12-unids-dr-peanut",
@@ -478,13 +314,13 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-avela.webp?alt=media&token=6b538f25-4649-4ae1-9af6-e5b6f1e3b39e",
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F1-brigadeiro.webp?alt=media&token=23c5675f-8cfa-4c84-a52a-dd9383e0fe9c",
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-brigadeiro.webp?alt=media&token=bea2d935-c917-44f7-8220-4437dab573b2",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F1-chocolate-branco.webp?alt=media&token=eca5181e-3b94-4efb-95a1-f32ace7c4a28",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-chocolate-branco.webp?alt=media&token=1398d8b8-b27c-4638-b219-1a775f0e260e",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F1-leite-em-po.webp?alt=media&token=a70aedcf-4488-425d-8a3a-4329854a5e26",
-          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-leite-em-po.webp?alt=media&token=d167d54c-34e9-4dc7-992b-a62f0de9ee37",
+          // "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F1-chocolate-branco.webp?alt=media&token=eca5181e-3b94-4efb-95a1-f32ace7c4a28",
+          // "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-chocolate-branco.webp?alt=media&token=1398d8b8-b27c-4638-b219-1a775f0e260e",
+          // "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F1-leite-em-po.webp?alt=media&token=a70aedcf-4488-425d-8a3a-4329854a5e26",
+          // "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/dr-peanut%2Falfajor%2F2-leite-em-po.webp?alt=media&token=d167d54c-34e9-4dc7-992b-a62f0de9ee37",
         ],
         basePrice: 139.99,
-        quantity: 10,
+        stock: 10,
         variation: ["Leite em Pó", "Avelã", "Brigadeiro", "Chocolate Branco"],
         categoryId: alfajorCategory.id,
         discountPercentage: 15, // 10% discount
@@ -499,7 +335,8 @@ async function main() {
       data: {
         name: "Whey Protein",
         slug: "whey-protein",
-        imageUrl: "",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-whey-isolado.png?alt=media&token=14971c70-bab1-4bb4-96e0-efa2bca62c4d",
       },
     });
 
@@ -516,7 +353,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F900%2F163594-800-auto.webp?alt=media&token=f7cb5f90-f33b-451e-869f-8095af9912d2",
         ],
         basePrice: 189.9,
-        quantity: 10,
+        stock: 10,
         variation: [
           "Banana",
           "Baunilha",
@@ -544,7 +381,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fwhey-protein-isolado%2F1-8-kg%2F4-whey-protein.webp?alt=media&token=4ab72913-4339-4e65-8f7f-a8af2c31d096",
         ],
         basePrice: 329.9,
-        quantity: 10,
+        stock: 10,
         variation: [
           "Banana",
           "Baunilha",
@@ -568,7 +405,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F900%2F4-whey-isolado.webp?alt=media&token=503d8be0-f000-4e7f-8b22-2b9c2c61de93",
         ],
         basePrice: 329.9,
-        quantity: 10,
+        stock: 10,
         variation: ["Baunilha", "Cappuccino", "Coco", "Cookies", "Morango"],
         categoryId: wheyCategory.id,
         discountPercentage: 0, // 10% discount
@@ -585,7 +422,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2FISOLADO%2F1-8%2F4-whey-isolado.webp?alt=media&token=9a59c8cc-194e-4480-8b58-e2bdfeb0ff19",
         ],
         basePrice: 489.9,
-        quantity: 10,
+        stock: 10,
         variation: ["Baunilha", "Chocolate", "Coco", "Cookies", "Morango"],
         categoryId: wheyCategory.id,
         discountPercentage: 0, // 10% discount
@@ -602,7 +439,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure.png?alt=media&token=f8b16b62-75fc-417a-b54a-bb8d36406653",
         ],
         basePrice: 129.9,
-        quantity: 10,
+        stock: 10,
         variation: [
           "Baunilha",
           "Chocolate",
@@ -626,7 +463,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fwhey-pure%2F900%2F1-whey-pure-pote.png?alt=media&token=37df2452-479d-46f0-8988-7580762ad1dc",
         ],
         basePrice: 159.9,
-        quantity: 10,
+        stock: 10,
         variation: [
           "Baunilha",
           "Chocolate",
@@ -650,7 +487,7 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Nutrata%2Fwhey-900%2F2-whey-900.jpeg?alt=media&token=de29d6ed-1a3c-499c-b4a6-768abbf8cca3",
         ],
         basePrice: 169.9,
-        quantity: 10,
+        stock: 10,
         variation: [
           "Beijinho",
           "Brigadeiro",
@@ -670,6 +507,153 @@ async function main() {
         categoryId: wheyCategory.id,
         discountPercentage: 0, // 10% discount
       },
+      {
+        name: "Whey PRO Refil (1,8kg) - Health Time - Sabores",
+        slug: "whey-pro-refil-1-8kg-health-time-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F1-8kg%2F1-whey-pro-1-8kg.webp?alt=media&token=1619353c-4f68-48d5-a63a-9710a828e955",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F1-8kg%2F2-whey-pro-1-8kg.webp?alt=media&token=794b28d5-31e1-48b5-b519-a78cc310b695",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F1-8kg%2F3-whey-pro-1-8kg.jpeg?alt=media&token=01cde22d-9942-475c-a49c-f0bdb61c66f2",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F1-8kg%2F4-whey-pro-1-8kg.webp?alt=media&token=395bb8af-974e-4d6c-b7d8-9d417ab8dda0",
+        ],
+        basePrice: 89.9,
+        stock: 10,
+        variation: [
+          "Banana com Canela",
+          "Baunilha",
+          "Capuccino",
+          "Chocolate Branco",
+          "Chocolate",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Whey PRO Refil (600kg) - Health Time - Sabores",
+        slug: "whey-pro-refil-600kg-health-time-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F600g%2F1-whey-pro-600g.jpeg?alt=media&token=d16e4ca6-3f27-4f9f-95b9-74a79a45a798",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F600g%2F2-whey-pro-600g.jpeg?alt=media&token=eb17a923-0203-460d-a730-04fc24382a22",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F600g%2F3-whey-pro-600g.jpeg?alt=media&token=53ce3ec9-ceb8-4db5-a247-d4054de5e8f2",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-pro%2F600g%2F4-whey-pro-600g.jpeg?alt=media&token=6e176671-8dcb-4c1e-8881-d8b72339f846",
+        ],
+        basePrice: 39.9,
+        stock: 10,
+        variation: [
+          "Banana com Canela",
+          "Baunilha",
+          "Capuccino",
+          "Chocolate Branco",
+          "Chocolate",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "100% Whey Refil (2,1kg) - Health Time - Sabores",
+        slug: "100-whay-refil-2-1kg-health-time-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-2-1-kg%2F1-whey-100.webp?alt=media&token=2d9da083-6332-4327-90c3-706e09690155",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-2-1-kg%2F1-whey-100.webp?alt=media&token=2d9da083-6332-4327-90c3-706e09690155",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-2-1-kg%2F1-whey-100.webp?alt=media&token=2d9da083-6332-4327-90c3-706e09690155",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-2-1-kg%2F1-whey-100.webp?alt=media&token=2d9da083-6332-4327-90c3-706e09690155",
+        ],
+        basePrice: 119.9,
+        stock: 10,
+        variation: [
+          "Banana com Canela",
+          "Baunilha",
+          "Capuccino",
+          "Chocolate Branco",
+          "Chocolate",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 5, // 10% discount
+      },
+      {
+        name: "100% Whey Refil (900g) - Health Time - Sabores",
+        slug: "100-whey-refil-900g-health-time-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-900g%2F1-whey-100-900g.webp?alt=media&token=30067f17-d010-4792-87b2-96117536f1a4",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-900g%2F1-whey-100-900g.webp?alt=media&token=30067f17-d010-4792-87b2-96117536f1a4",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-900g%2F1-whey-100-900g.webp?alt=media&token=30067f17-d010-4792-87b2-96117536f1a4",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/health-time%2Fwhey-100-900g%2F1-whey-100-900g.webp?alt=media&token=30067f17-d010-4792-87b2-96117536f1a4",
+        ],
+        basePrice: 79.9,
+        stock: 10,
+        variation: [
+          "Banana com Canela",
+          "Baunilha",
+          "Capuccino",
+          "Chocolate Branco",
+          "Chocolate",
+          "Morango",
+        ],
+        categoryId: wheyCategory.id,
+        discountPercentage: 10, // 10% discount
+      },
+      {
+        name: "Whey iso Triple Zero (1,8kg) Whey Protein Isolado IntegralMedica - Sabores",
+        slug: "whey-iso-triple-zero-1-8kg-whey-protein-isolado-integralmedica-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-1-8kg%2F1-triple-zero.png?alt=media&token=00ce3a87-29fd-42c1-ba57-fd5ecdc7dc1e",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-1-8kg%2F1-triple-zero.png?alt=media&token=00ce3a87-29fd-42c1-ba57-fd5ecdc7dc1e",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-1-8kg%2F1-triple-zero.png?alt=media&token=00ce3a87-29fd-42c1-ba57-fd5ecdc7dc1e",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-1-8kg%2F1-triple-zero.png?alt=media&token=00ce3a87-29fd-42c1-ba57-fd5ecdc7dc1e",
+        ],
+        basePrice: 459.9,
+        stock: 10,
+        variation: ["Baunilha", "Chocolate", "Coco", "Morango"],
+        categoryId: wheyCategory.id,
+        discountPercentage: 10, // 10% discount
+      },
+      {
+        name: "Whey iso Triple Zero (900g) Whey Protein Isolado IntegralMedica - Sabores",
+        slug: "whet-iso-triple-zero-900g-whey-protein-isolado-integralmedica-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+        ],
+        basePrice: 269.9,
+        stock: 10,
+        variation: ["Baunilha", "Chocolate", "Coco", "Morango"],
+        categoryId: wheyCategory.id,
+        discountPercentage: 10, // 10% discount
+      },
+      {
+        name: "YoPRO Bebida Láctea UHT 15g de proteínas 250ml - Sabores",
+        slug: "yo-pro-bebida-lactea-uht-15g-de-proteinas-250ml-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fiso-triple-zero-900g%2F1-iso-triple-zero-900.png?alt=media&token=e572508f-fab6-4e47-9490-27b7791d527d",
+        ],
+        basePrice: 269.9,
+        stock: 10,
+        variation: ["Banana", "Chocolate", "Coco c/ Batata Doce", "Morango"],
+        categoryId: wheyCategory.id,
+        discountPercentage: 10, // 10% discount
+      },
     ];
 
     await prisma.product.createMany({
@@ -680,7 +664,8 @@ async function main() {
       data: {
         name: "Pré Treinos",
         slug: "pre-treinos",
-        imageUrl: "",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-pre-treino-workout.png?alt=media&token=828844cd-b7e9-4595-aad5-19b36e9a0e4e",
       },
     });
 
@@ -697,8 +682,84 @@ async function main() {
           "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/DUX-NUTRITIUM%2Fpre-treino%2F1-pre-treino-workout.webp?alt=media&token=933ed848-2c34-4990-9d94-79398f7eaf23",
         ],
         basePrice: 129.9,
-        quantity: 10,
+        stock: 10,
         variation: ["Pink Lemonade", "Guarana", "Cherry Bomb"],
+        categoryId: preTreinoCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Epic Pre Workout 300G - Probiotica - Sabores",
+        slug: "epic-pre-workout-300g-probiotica-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fpre-treino-300g%2F1-pre-treino.jpeg?alt=media&token=de2f5975-3a92-4102-b11d-ba7b110de673",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fpre-treino-300g%2F1-pre-treino.jpeg?alt=media&token=de2f5975-3a92-4102-b11d-ba7b110de673",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fpre-treino-300g%2F1-pre-treino.jpeg?alt=media&token=de2f5975-3a92-4102-b11d-ba7b110de673",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fpre-treino-300g%2F2-pre-treino.jpeg?alt=media&token=8e5758c7-ccf6-4667-a436-0c6522885996",
+        ],
+        basePrice: 129.9,
+        stock: 10,
+        variation: [
+          "Limão",
+          "Melancia",
+          "Guaraná",
+          "Frutas",
+          "Frutas Brasileiras",
+          "Energy",
+        ],
+        categoryId: preTreinoCategory.id,
+        discountPercentage: 5, // 10% discount
+      },
+      {
+        name: "Pump Veins 300G Demons - Sabores",
+        slug: "pump-veins-300g-demons-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treino-300.png?alt=media&token=3d29dc8b-9dd0-4ed9-b107-0c87e93fc855",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treino-300.png?alt=media&token=3d29dc8b-9dd0-4ed9-b107-0c87e93fc855",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treino-300.png?alt=media&token=3d29dc8b-9dd0-4ed9-b107-0c87e93fc855",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treino-300.png?alt=media&token=3d29dc8b-9dd0-4ed9-b107-0c87e93fc855",
+        ],
+        basePrice: 139.9,
+        stock: 10,
+        variation: ["Fruit Punch", "Maçã Verde"],
+        categoryId: preTreinoCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "PRÉ TREINO INSANE ORIGINAL MÁXIMA FORÇA E FOCO (300G) - DEMONS LAB - Sabores",
+        slug: "pre-treino-insane-original-maxima-forca-e-foco-300g-demons-lab-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-insane-pre-treino-300.jpeg?alt=media&token=46e05276-af1a-4f81-9d36-dc13abdee3a8",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-insane-pre-treino-300.jpeg?alt=media&token=46e05276-af1a-4f81-9d36-dc13abdee3a8",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-insane-pre-treino-300.jpeg?alt=media&token=46e05276-af1a-4f81-9d36-dc13abdee3a8",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-insane-pre-treino-300.jpeg?alt=media&token=46e05276-af1a-4f81-9d36-dc13abdee3a8",
+        ],
+        basePrice: 119.9,
+        stock: 10,
+        variation: ["Fruit Punch", "Laranja", "Uva"],
+        categoryId: preTreinoCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+
+      {
+        name: "Psichotic Demon Black 300g - Demons Lab - Sabores",
+        slug: "psichotic-demon-black-300g-demons-lab-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treinopsichotic-300.png?alt=media&token=77ad4ebf-251f-4bc3-9a6e-dd346b1e7787",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treinopsichotic-300.png?alt=media&token=77ad4ebf-251f-4bc3-9a6e-dd346b1e7787",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F1-pre-treinopsichotic-300.png?alt=media&token=77ad4ebf-251f-4bc3-9a6e-dd346b1e7787",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/demons%2Fpre-treino-300g%2F2-pre-treinopsichotic-300.png?alt=media&token=b19c04cb-b773-4eb4-876c-a3420b0da11b",
+        ],
+        basePrice: 119.9,
+        stock: 10,
+        variation: ["Fruit Punch", "Pineaplle"],
         categoryId: preTreinoCategory.id,
         discountPercentage: 0, // 10% discount
       },
@@ -706,6 +767,56 @@ async function main() {
 
     await prisma.product.createMany({
       data: preTreinosProducts,
+    });
+
+    const hiperCaloricosCategory = await prisma.category.create({
+      data: {
+        name: "Hiper Calóricos",
+        slug: "hiper-caloricos",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/categorias%2F1-pre-treino-workout.png?alt=media&token=828844cd-b7e9-4595-aad5-19b36e9a0e4e",
+      },
+    });
+
+    const hiperCaloricosProducts = [
+      {
+        name: "SINISTER MASS 3Kg - Integralmédica - Sabores",
+        slug: "sinister-mass-3kg-integralmedica-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fhiper%2F1-hiper.jpg?alt=media&token=1ffe4181-9d49-474d-aa3b-1614bb698c6d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fhiper%2F2-hiper.jpeg?alt=media&token=adea69ed-32ec-47d5-948b-52e2ecf22647",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fhiper%2F3-hiper.jpeg?alt=media&token=8f3739a5-a664-4e85-8742-76672923e39d",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/Integralmedica%2Fhiper%2F1-hiper.jpg?alt=media&token=1ffe4181-9d49-474d-aa3b-1614bb698c6d",
+        ],
+        basePrice: 109.9,
+        stock: 10,
+        variation: ["Chocolate", "Baunilha", "Cookies", "Morango"],
+        categoryId: hiperCaloricosCategory.id,
+        discountPercentage: 0, // 10% discount
+      },
+      {
+        name: "Hipercalórico Massa Nitro (2,52kg) – Probiótica - Sabores",
+        slug: "hipercalorico-massa-nitro-2-52kg-probiotica-sabores",
+        description:
+          "Farinha de trigo enriquecida com ferro e ácido fólico;maltodextrina de milho;creme de milho;gordura vegetal;polidextrose;cacau em pó;amido de milho;vitamina D;B1 (tiamina);B3 (niacina);B5 (ácido pantotênico);B6 (piridoxina);Vitamina H (biotina);B12 (cobalamina);agente de corpo sorbitol;corante natural",
+        imageUrls: [
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fhipercalorico(2%2C52kg)%2FMassa-Nitro-252kg-chocolate.png?alt=media&token=9739ec8d-42fb-41df-aafb-692d9d66ef2b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fhipercalorico(2%2C52kg)%2FMassa-Nitro-252kg-chocolate.png?alt=media&token=9739ec8d-42fb-41df-aafb-692d9d66ef2b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fhipercalorico(2%2C52kg)%2FMassa-Nitro-252kg-chocolate.png?alt=media&token=9739ec8d-42fb-41df-aafb-692d9d66ef2b",
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/probiotica%2Fhipercalorico(2%2C52kg)%2FMassa-Nitro-252kg-chocolate.png?alt=media&token=9739ec8d-42fb-41df-aafb-692d9d66ef2b",
+        ],
+        basePrice: 99.9,
+        stock: 10,
+        variation: ["Chocolate", "Baunilha", "Morango"],
+        categoryId: hiperCaloricosCategory.id,
+        discountPercentage: 15, // 10% discount
+      },
+    ];
+
+    await prisma.product.createMany({
+      data: hiperCaloricosProducts,
     });
 
     console.log("Seed completed successfully");

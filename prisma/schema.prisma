@@ -38,10 +38,11 @@ model Product {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   variation          String[]
-  quantity           Int      @default(0)
+  stock              Int      @default(0)
+  selectedVariation  String?
 
   categoryId   String
-  category     Category       @relation(fields: [categoryId], references: [id])
+  category     Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   orderProduct OrderProduct[]
 
   @@map("products")
@@ -63,7 +64,7 @@ model Order {
   id           String         @id @default(cuid())
   status       OrderStatus    @default(WAITING_FOR_PAYMENT)
   userId       String
-  user         User           @relation(fields: [userId], references: [id])
+  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   orderProduct OrderProduct[]
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
@@ -74,12 +75,13 @@ model Order {
 model OrderProduct {
   id                 String   @id @default(cuid())
   productId          String
-  product            Product  @relation(fields: [productId], references: [id])
+  product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   orderId            String
-  order              Order    @relation(fields: [orderId], references: [id])
+  order              Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
   basePrice          Decimal  @db.Decimal(10, 2)
   quantity           Int
   discountPercentage Int      @default(0)
+  selectedVariation  String?
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
 
