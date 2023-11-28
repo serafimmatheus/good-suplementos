@@ -151,7 +151,7 @@ const Header = () => {
         </Sheet>
 
         <h1>
-          GOOD <span>Suplementos</span>
+          SERAFA <span>Suplementos</span>
         </h1>
         <div className="relative">
           {products.length > 0 && (

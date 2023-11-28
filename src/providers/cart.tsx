@@ -50,7 +50,7 @@ const CartContext = createContext<ICartContext>({
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
 
-  // JSON.parse(localStorage.getItem("@good-sup-ecomerce:cart") || []);
+  // JSON.parse(localStorage.getItem("@serafa-sup-ecomerce:cart") || []);
 
   const subTotal = useMemo(() => {
     return products.reduce((acc, curr) => {
@@ -146,12 +146,12 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem("@good-sup-ecomerce:cart", JSON.stringify(products));
+    localStorage.setItem("@serafa-sup-ecomerce:cart", JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
     setProducts(
-      JSON.parse(localStorage.getItem("@good-sup-ecomerce:cart") || "[]")
+      JSON.parse(localStorage.getItem("@serafa-sup-ecomerce:cart") || "[]")
     );
   }, []);
 

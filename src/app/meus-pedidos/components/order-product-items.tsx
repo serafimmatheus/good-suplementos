@@ -37,7 +37,7 @@ const OrderProductsItem = ({
       <div className="flex flex-col gap-1">
         <div className="flex flex-col bg-accent px-2 py-1 rounded-lg">
           <p className="text-[10px]">
-            Vendido e entregue por <span className="text-primary">GOOD</span>
+            Vendido e entregue por <span className="text-primary">SERAFA</span>
           </p>
         </div>
         <p className="font-bold text-xs">

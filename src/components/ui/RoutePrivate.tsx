@@ -9,8 +9,8 @@ const RoutePrivate = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
 
   React.useEffect(() => {
-    if (status === "unauthenticated" || !session) {
-      router.push("/"); // Redireciona para a página inicial se não houver uma sessão autenticada
+    if (!session) {
+      return router.push("/"); // Redireciona para a página inicial se não houver uma sessão autenticada
     }
   }, [status, session, router]);
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { ShoppingCartIcon } from "lucide-react";
 import { Badge } from "./badge";
 import { useCart } from "@/providers/cart";
@@ -23,11 +21,9 @@ const Cart = () => {
 
     const order = await createOrder(products, (session!.user! as any).id);
 
-    console.log(order);
+    console.log((session.user as any).id);
 
     const checkout = await createCheckout(products as any, (order as any).id);
-
-    console.log(checkout);
 
     // const { data: session, status } = useSession();
 

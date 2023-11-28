@@ -43,7 +43,7 @@ const HeaderDesktop = () => {
       <div className="max-w-5xl mx-auto flex justify-between items-center ">
         <Link href="/">
           <h1>
-            GOOD <span>Suplementos</span>
+            SERAFA <span>Suplementos</span>
           </h1>
         </Link>
 

@@ -41,9 +41,10 @@ model Product {
   stock              Int      @default(0)
   selectedVariation  String?
 
-  categoryId   String
-  category     Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  orderProduct OrderProduct[]
+  categoryId     String
+  category       Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  orderProduct   OrderProduct[]
+  datailsProduct DatailsProduct[]
 
   @@map("products")
 }
@@ -86,6 +87,30 @@ model OrderProduct {
   updatedAt          DateTime @updatedAt
 
   @@map("order-products")
+}
+
+model Datails {
+  id             String           @id @default(cuid())
+  title          String
+  subTitle       String[]
+  imageUrl       String
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  DatailsProduct DatailsProduct[]
+
+  @@map("details")
+}
+
+model DatailsProduct {
+  id        String   @id @default(cuid())
+  productId String
+  detailsId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  details   Datails  @relation(fields: [detailsId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("details-product")
 }
 
 model Account {

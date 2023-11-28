@@ -19,9 +19,8 @@ export const authOptions: AuthOptions = {
         id: string;
         name: string;
         email: string;
-        image: string;
       };
-      // return Promise.resolve(session);
+
       return session;
     },
   },

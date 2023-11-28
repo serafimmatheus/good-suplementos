@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import TextTitleBase from "@/components/ui/text-title-base";
 import { ProductWithTotalPrice } from "@/helpers/total-price-discount";
 import { useCart } from "@/providers/cart";
-import { Product } from "@prisma/client";
+import { Product, Datails as MyDatails, DatailsProduct } from "@prisma/client";
 import {
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -16,13 +16,15 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import Variant from "./variant";
+import Details from "./details";
 
 interface ThumbnailProps {
   product: ProductWithTotalPrice;
   productRelation: Product[];
+  details: any[];
 }
 
-const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
+const Thumbnail = ({ product, productRelation, details }: ThumbnailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [count, setCount] = useState(1);
   const [variant, setVariant] = useState("");
@@ -200,7 +202,7 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
 
               <div>
                 <h3 className="text-xs font-bold">
-                  Entrega via <span>GOOD Suplementos®</span>{" "}
+                  Entrega via <span>SERAFA Suplementos®</span>{" "}
                 </h3>
                 <p className="text-xs text-primary">
                   Envio para <b className="font-bold">Curitiba e Região</b>
@@ -212,6 +214,10 @@ const Thumbnail = ({ product, productRelation }: ThumbnailProps) => {
           </div>
         </div>
       </div>
+
+      {details.map((detail, index) => (
+        <Details key={detail.id} datails={detail} index={index} />
+      ))}
 
       {productRelation.length > 0 && (
         <div className="mb-8 md:mt-24">

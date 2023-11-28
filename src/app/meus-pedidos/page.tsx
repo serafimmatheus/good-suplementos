@@ -6,12 +6,16 @@ import { getServerSession } from "next-auth";
 import OrderItem from "./components/order-item";
 import { RoutePrivate } from "@/components/ui/RoutePrivate";
 
+export const dynamic = "force-dynamic";
+
 const MeusPedidos = async () => {
   const user = getServerSession(authOptions);
 
   if (!user) {
     return <p>Acesso Negado!</p>;
   }
+
+  console.log(user);
 
   const orders = await prismaClient.order.findMany({
     where: {

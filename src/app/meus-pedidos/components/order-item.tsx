@@ -9,6 +9,7 @@ import { Prisma } from "@prisma/client";
 import dayjs from "dayjs";
 import OrderProductsItem from "./order-product-items";
 import { useMemo } from "react";
+import { useSession } from "next-auth/react";
 
 interface OrderItemProps {
   order: Prisma.OrderGetPayload<{
