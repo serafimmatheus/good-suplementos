@@ -133,7 +133,7 @@ const Header = () => {
                 </Link>
               </SheetClose>
 
-              {status === "authenticated" && (
+              {/* {status === "authenticated" && (
                 <SheetClose asChild>
                   <Link href="/meus-pedidos">
                     <Button
@@ -146,7 +146,7 @@ const Header = () => {
                     </Button>
                   </Link>
                 </SheetClose>
-              )}
+              )} */}
             </div>
           </SheetContent>
         </Sheet>
