@@ -22,6 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="oX9aNoYEIaMyKtUpRdMNrzLNA83HGUMj0qTHKOuPCl4"
+        />
+      </head>
       <body className={inter.className}>
         <div className="flex flex-col h-full">
           <CartProvider>
