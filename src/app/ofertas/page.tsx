@@ -23,7 +23,7 @@ const DealsPage = async () => {
           return (
             <ProductItemCategory
               key={product.id}
-              product={totalPriceDiscount(product)}
+              product={totalPriceDiscount(product, "")}
             />
           );
         })}
