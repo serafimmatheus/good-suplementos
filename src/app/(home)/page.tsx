@@ -31,8 +31,6 @@ export default async function Home() {
     },
   });
 
-  console.log(creatina);
-
   return (
     <main className="py-8 lg:pt-0">
       <PromoBanner

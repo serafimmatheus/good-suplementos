@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.product-slide {
+  flex: 0 0 100%; /* Ajuste conforme necessário */
+  transition: transform 0.5s ease-in-out;
+}
+
+.active {
+  transform: translateX(0);
+}
+
 @layer base {
   :root {
     --background: 0 0% 4%;

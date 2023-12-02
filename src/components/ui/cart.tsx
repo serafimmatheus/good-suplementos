@@ -12,7 +12,7 @@ import { createOrder } from "@/actions/order";
 
 const Cart = () => {
   const { data: session, status } = useSession();
-  const { products, subTotal, totalDiscount, total } = useCart();
+  const { products, subTotal, totalDiscount, total, frete } = useCart();
 
   const handleFinishCheckout = async () => {
     if (!session?.user) {
@@ -80,7 +80,21 @@ const Cart = () => {
 
             <li className="flex justify-between item border-t-2 py-2">
               <span className="text-xs opacity-60">Entrega</span>
-              <span className="text-xs opacity-60">GRÁTIS</span>
+              {total > 200 ? (
+                <span className="text-xs opacity-60 line-through">
+                  {frete.toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </span>
+              ) : (
+                <span className="text-xs opacity-60">
+                  {frete.toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </span>
+              )}
             </li>
 
             <li className="flex justify-between item border-t-2 py-2">
@@ -96,12 +110,21 @@ const Cart = () => {
 
             <li className="flex justify-between item border-t-2 py-2">
               <span className="text-base">Total</span>
-              <span className="text-base">
-                {total.toLocaleString("pt-br", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </span>
+              {total > 200 ? (
+                <span className="text-base">
+                  {total.toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </span>
+              ) : (
+                <span className="text-base">
+                  {(total + frete).toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </span>
+              )}
             </li>
 
             {session?.user ? (

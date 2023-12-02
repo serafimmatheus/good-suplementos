@@ -7,10 +7,6 @@ import Footer from "@/components/ui/footer";
 import CartProvider from "@/providers/cart";
 import HeaderDesktop from "@/components/ui/header-desktop";
 import WhatsApp from "@/components/ui/whatsApp";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { useSession } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 

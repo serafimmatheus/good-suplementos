@@ -4,6 +4,41 @@ const prisma = new PrismaClient();
 
 async function main() {
   try {
+    const descriptionCreatina = [
+      {
+        title: "O QUE É CREATINA MONOHIDRATADA?",
+        subTitle: [
+          "Quimicamente, a creatina monohidratada é chamada de amina, um composto derivado de aminoácidos que pode ser obtido por meio da dieta (alimentos), da síntese feita por nosso próprio organismo ou da suplementação. A creatina suplemento garante uma quantidade excelente desse nutriente no seu dia a dia. Isso faz com que o seu corpo tenha todas as necessidades supridas, com toda a energia para crescer e não perder a massa muscular conquistada nos treinos.",
+          "A creatina produzida em nosso corpo, é sintetizada nos rins, fígado e no pâncreas, e secretada na corrente sanguínea até o tecido muscular. Já quando o assunto é o suplemento alimentar de creatina, sua fabricação é feita por meio de métodos avançados da tecnologia dos alimentos. Uma de suas características é que seu sabor não é acentuado e, por isso, ela pode ser diluída no líquido de sua preferência.",
+        ],
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/detalhes-creatina%2F1-image.jpeg?alt=media&token=f7f8cd4f-6612-4328-98bf-e71c4f90c448",
+      },
+      {
+        title:
+          "BENEFÍCIOS DA CREATINA MONOHIDRATADA: SUPLEMENTO PARA QUEM QUER GANHAR MASSA MUSCULAR",
+        subTitle: [
+          "A creatina monohidratada é um dos suplementos mais populares do mercado. Além disso, é o suplemento mais estudado pela ciência esportiva. Ela é usada por atletas de diversas modalidades, incluindo fisiculturistas profissionais. O foco da sua aplicação na dieta é o ganho de massa muscular, garantindo a energia que seu músculo precisa para crescer cada vez mais. Entre os seus benefícios, a creatina aumenta a capacidade do músculo de gerar força. Ajuda diretamente na hipertrofia muscular, aumenta sua capacidade de treino, previne o catabolismo e influencia a transcrição gênica.",
+          "Caso o seu objetivo seja atingir a hipertrofia, o melhor a fazer é comprar Creatina Monohidratada da Growth Supplements, procurar um nutricionista de sua confiança e começar a tomá-la de forma estratégica.",
+        ],
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/detalhes-creatina%2F2-image.png?alt=media&token=a4685f6b-1adc-4564-8e0f-08c12d6fbc6e",
+      },
+      {
+        title: "COMO TOMAR CREATINA MONOHIDRATADA?",
+        subTitle: [
+          "Como tomar creatina monohidratada costuma ser uma dúvida frequente de quem está começando a inserir esse produto na dieta. Por isso, vamos explicar essa questão. O suplemento creatina pode ser ingerido em qualquer momento do dia, dependendo da estratégia adotada. Por isso, não há uma só maneira de saber como tomar creatina. Ela pode ser consumida tanto com água quanto na mistura em shakes do pós ou pré-treino.",
+          "Um detalhe importante é que ela deve ser consumida todos os dias, mesmo nos dias em que você não treina. Dessa forma, é possível evidenciar todos os seus benefícios na rotina. Ela também é insulinodependente, por isso, é preciso consumir junto com alimentos ou suplementos que influenciam a produção de insulina - entre eles, dextrose, maltodextrina, arroz, pão, macarrão e proteínas, como whey protein.",
+        ],
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/good-suplementos-df06f.appspot.com/o/detalhes-creatina%2F3-image.png?alt=media&token=fc13c841-610d-4fe4-a04d-59056d63655e",
+      },
+    ];
+
+    const createdDetailsCreatinas = await prisma.datails.createMany({
+      data: descriptionCreatina,
+    });
+
     const creatinaCategory = await prisma.category.create({
       data: {
         name: "Creatina",

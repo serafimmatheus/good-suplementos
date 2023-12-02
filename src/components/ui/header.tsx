@@ -23,6 +23,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import Link from "next/link";
 import Cart from "./cart";
 import { useCart } from "@/providers/cart";
+import Image from "next/image";
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -153,6 +154,7 @@ const Header = () => {
         <h1>
           SERAFA <span>Suplementos</span>
         </h1>
+
         <div className="relative">
           {products.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 rounded-full text-white text-xs px-1">

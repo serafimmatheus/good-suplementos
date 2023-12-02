@@ -23,6 +23,7 @@ interface ICartContext {
   subTotal: number;
   total: number;
   totalDiscount: number;
+  frete: number;
   addProductToCart: (product: CartProduct) => void;
   decreaseQuantity: (productId: string, selectedVariation: string) => void;
   incrementQuantity: (
@@ -45,12 +46,15 @@ const CartContext = createContext<ICartContext>({
   total: 0,
   totalDiscount: 0,
   subTotal: 0,
+  frete: 15,
 });
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
 
   // JSON.parse(localStorage.getItem("@serafa-sup-ecomerce:cart") || []);
+
+  const frete = 15;
 
   const subTotal = useMemo(() => {
     return products.reduce((acc, curr) => {
@@ -165,6 +169,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         total,
         totalDiscount,
         subTotal,
+        frete,
         addProductToCart,
         decreaseQuantity,
         incrementQuantity,
