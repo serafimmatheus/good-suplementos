@@ -33,7 +33,7 @@ const CategoryPage = async ({ params }: any) => {
         {products.map((product) => (
           <ProductItemCategory
             key={product.id}
-            product={totalPriceDiscount(product)}
+            product={totalPriceDiscount(product, "")}
           />
         ))}
       </Container>
