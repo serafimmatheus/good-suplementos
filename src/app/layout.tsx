@@ -7,6 +7,7 @@ import Footer from "@/components/ui/footer";
 import CartProvider from "@/providers/cart";
 import HeaderDesktop from "@/components/ui/header-desktop";
 import WhatsApp from "@/components/ui/whatsApp";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
+              <Toaster />
               <Header />
               <HeaderDesktop />
               <div className="flex-1">{children}</div>

@@ -3,6 +3,7 @@ import { ArrowLeftIcon, ArrowRightIcon, TrashIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./button";
 import { useCart } from "@/providers/cart";
+import { useToast } from "@/components/ui/use-toast";
 
 interface CartItemProps {
   product: ProductWithTotalPrice;
@@ -11,6 +12,7 @@ interface CartItemProps {
 
 const CartItem = ({ product, quantity }: CartItemProps) => {
   const { decreaseQuantity, incrementQuantity, deleteProduct } = useCart();
+  const { toast } = useToast();
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
@@ -75,7 +77,14 @@ const CartItem = ({ product, quantity }: CartItemProps) => {
       <Button
         variant="outline"
         size="icon"
-        onClick={() => deleteProduct(product.id)}
+        onClick={() => {
+          deleteProduct(product.id);
+          toast({
+            variant: "destructive",
+            title: "Produto removido do carrinho",
+            description: ` ${product.name} - ${product.selectedVariation} foi removido do carrinho.`,
+          });
+        }}
       >
         <TrashIcon size={16} className="opacity-70" />
       </Button>

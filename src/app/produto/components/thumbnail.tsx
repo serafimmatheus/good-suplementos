@@ -18,6 +18,8 @@ import { useState } from "react";
 import Variant from "./variant";
 import Details from "./details";
 
+import { useToast } from "@/components/ui/use-toast";
+
 interface ThumbnailProps {
   product: ProductWithTotalPrice;
   productRelation: Product[];
@@ -28,6 +30,7 @@ const Thumbnail = ({ product, productRelation, details }: ThumbnailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [count, setCount] = useState(1);
   const [variant, setVariant] = useState("");
+  const { toast } = useToast();
 
   const { addProductToCart } = useCart();
 
@@ -52,6 +55,11 @@ const Thumbnail = ({ product, productRelation, details }: ThumbnailProps) => {
       ...product,
       quantity: count,
       selectedVariation: variant,
+    });
+
+    toast({
+      title: "Produto Adicionado ao carrinho",
+      description: "Seu produto foi adicionado ao carrinho com sucesso",
     });
   };
 
@@ -209,7 +217,9 @@ const Thumbnail = ({ product, productRelation, details }: ThumbnailProps) => {
                 </p>
               </div>
 
-              <p className="text-xs font-bold">Frete Grátis</p>
+              <p className="text-xs font-bold">
+                Frete Grátis a partir de R$ 200,00
+              </p>
             </div>
           </div>
         </div>
