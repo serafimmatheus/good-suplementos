@@ -1,13 +1,13 @@
-"use server";
+'use server'
 
-import { prismaClient } from "@/lib/prisma";
-import { CartProduct } from "@/providers/cart";
+import { prismaClient } from '@/lib/prisma'
+import type { CartProduct } from '@/providers/cart'
 
 const createOrder = async (cardProducts: CartProduct[], userId: string) => {
   const order = await prismaClient.order.create({
     data: {
       userId: userId,
-      status: "WAITING_FOR_PAYMENT",
+      status: 'WAITING_FOR_PAYMENT',
       orderProduct: {
         createMany: {
           data: cardProducts.map((product) => ({
@@ -20,9 +20,9 @@ const createOrder = async (cardProducts: CartProduct[], userId: string) => {
         },
       },
     },
-  });
+  })
 
-  return order;
-};
+  return order
+}
 
-export { createOrder };
+export { createOrder }

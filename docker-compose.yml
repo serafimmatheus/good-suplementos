@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  gestao-rodagem:
+    container_name: serafa-suplementos
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: serafa
+      POSTGRES_USER: serafa
+      POSTGRES_DB: serafa
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
