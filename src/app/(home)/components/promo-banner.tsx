@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 interface PromoBannerProps {
-  src: string;
+  src: string
 
-  alt: string;
+  alt: string
 }
 
 const PromoBanner = ({ alt, src }: PromoBannerProps) => {
@@ -13,10 +13,10 @@ const PromoBanner = ({ alt, src }: PromoBannerProps) => {
       alt={alt}
       width={0}
       height={0}
-      sizes="100vw"
-      className="w-full h-auto px-5 lg:hidden"
+      sizes='100vw'
+      className='w-full h-auto px-5 lg:hidden rounded-lg'
     />
-  );
-};
+  )
+}
 
-export default PromoBanner;
+export default PromoBanner

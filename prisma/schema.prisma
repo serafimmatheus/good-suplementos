@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,11 +5,6 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-}
-
-enum OrderStatus {
-  WAITING_FOR_PAYMENT
-  PAYMENT_CONFIRMED
 }
 
 model Category {
@@ -28,47 +20,34 @@ model Category {
 }
 
 model Product {
-  id                 String   @id @default(cuid())
+  id                 String           @id @default(cuid())
   name               String
-  slug               String   @unique
+  slug               String           @unique
   description        String
-  basePrice          Decimal  @db.Decimal(10, 2)
+  basePrice          Decimal          @db.Decimal(10, 2)
   imageUrls          String[]
-  discountPercentage Int      @default(0)
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
+  discountPercentage Int              @default(0)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
   variation          String[]
-  stock              Int      @default(0)
+  stock              Int              @default(0)
   selectedVariation  String?
-
-  categoryId     String
-  category       Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  orderProduct   OrderProduct[]
-  datailsProduct DatailsProduct[]
+  categoryId         String
+  datailsProduct     DatailsProduct[]
+  orderProduct       OrderProduct[]
+  category           Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 
   @@map("products")
 }
-
-// model Variation {
-//   id        String    @id @default(cuid())
-//   name      String
-//   slug      String    @unique
-//   value     String
-//   createdAt DateTime  @default(now())
-//   updatedAt DateTime  @updatedAt
-//   Product   Product[]
-
-//   @@map("variations")
-// }
 
 model Order {
   id           String         @id @default(cuid())
   status       OrderStatus    @default(WAITING_FOR_PAYMENT)
   userId       String
-  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
-  orderProduct OrderProduct[]
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
+  orderProduct OrderProduct[]
+  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("orders")
 }
@@ -76,15 +55,15 @@ model Order {
 model OrderProduct {
   id                 String   @id @default(cuid())
   productId          String
-  product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   orderId            String
-  order              Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
   basePrice          Decimal  @db.Decimal(10, 2)
   quantity           Int
   discountPercentage Int      @default(0)
   selectedVariation  String?
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
+  order              Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
 
   @@map("order-products")
 }
@@ -105,10 +84,10 @@ model DatailsProduct {
   id        String   @id @default(cuid())
   productId String
   detailsId String
-  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  details   Datails  @relation(fields: [detailsId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  details   Datails  @relation(fields: [detailsId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
 
   @@map("details-product")
 }
@@ -119,15 +98,14 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? @db.Text
+  id_token          String?
   session_state     String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
@@ -157,4 +135,9 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+enum OrderStatus {
+  WAITING_FOR_PAYMENT
+  PAYMENT_CONFIRMED
 }

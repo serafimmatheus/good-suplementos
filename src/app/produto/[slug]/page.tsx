@@ -1,7 +1,6 @@
-import { prismaClient } from "@/lib/prisma";
-import Thumbnail from "../components/thumbnail";
-import { totalPriceDiscount } from "@/helpers/total-price-discount";
-import { Datails } from "@prisma/client";
+import { totalPriceDiscount } from '@/helpers/total-price-discount'
+import { prismaClient } from '@/lib/prisma'
+import Thumbnail from '../components/thumbnail'
 
 const ProductPage = async ({ params }: any) => {
   const product = await prismaClient.product.findUnique({
@@ -27,27 +26,25 @@ const ProductPage = async ({ params }: any) => {
         },
       },
     },
-  });
+  })
 
   if (!product) {
-    return <div>Produto não encontrado</div>;
+    return <div>Produto não encontrado</div>
   }
 
   const details = product.datailsProduct.map((datails: any) => {
-    return datails.details;
-  });
-
-  console.log(details);
+    return datails.details
+  })
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className='container'>
       <Thumbnail
-        product={totalPriceDiscount(product, "")}
+        product={totalPriceDiscount(product, '')}
         productRelation={product.category.products}
         details={details}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ProductPage;
+export default ProductPage
