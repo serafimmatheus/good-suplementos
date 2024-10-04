@@ -39,7 +39,7 @@ const Header = () => {
   }
 
   return (
-    <Card className='py-8 px-5 lg:hidden'>
+    <Card className='py-8 px-2 md:px-5 lg:hidden'>
       <div className='container flex justify-between items-center'>
         <Sheet>
           <SheetTrigger asChild>
@@ -151,9 +151,15 @@ const Header = () => {
           </SheetContent>
         </Sheet>
 
-        <h1>
-          SERAFA <span>Suplementos</span>
-        </h1>
+        <Link href='/'>
+          <Image
+            src='/logo/serafa-suplementos.png'
+            alt='Serafa Suplementos'
+            width={200}
+            height={50}
+            className='object-contain'
+          />
+        </Link>
 
         <div className='relative'>
           {products.length > 0 && (

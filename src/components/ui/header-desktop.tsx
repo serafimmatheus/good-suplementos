@@ -3,12 +3,15 @@
 import { useCart } from '@/providers/cart'
 import { LogInIcon, LogOutIcon, ShoppingCartIcon, UserIcon } from 'lucide-react'
 import { signIn, signOut, useSession } from 'next-auth/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Avatar, AvatarFallback, AvatarImage } from './avatar'
 import { Button } from './button'
 import { Card } from './card'
 import Cart from './cart'
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from './sheet'
+import { Sheet, SheetContent, SheetTrigger } from './sheet'
+
+import serafaSuplementos from '../../../public/logo/serafa-suplementos.png'
 
 const HeaderDesktop = () => {
   const { data: session, status } = useSession()
@@ -27,9 +30,13 @@ const HeaderDesktop = () => {
     <Card className='py-8 px-5 hidden lg:block'>
       <div className='container flex justify-between items-center '>
         <Link href='/'>
-          <h1>
-            SERAFA <span>Suplementos</span>
-          </h1>
+          <Image
+            src='/logo/serafa-suplementos.png'
+            alt='Serafa Suplementos'
+            width={200}
+            height={50}
+            className='object-contain'
+          />
         </Link>
 
         <div>
