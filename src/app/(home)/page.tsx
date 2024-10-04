@@ -1,4 +1,6 @@
 import { CarouselApp } from '@/components/shared/carousel'
+import Menu from '@/components/shared/menu'
+import { MenuDesktop } from '@/components/shared/menu/menu-desktop'
 import TextTitleBase from '@/components/ui/text-title-base'
 import { prismaClient } from '@/lib/prisma'
 import Image from 'next/image'
@@ -33,24 +35,23 @@ export default async function Home() {
 
   return (
     <main className='py-8 lg:pt-0'>
+      {/* <div className='border-b py-2 flex justify-center'>
+        <Menu />
+      </div> */}
       <div className='container'>
         <PromoBanner
           src='/banner-20off-mobile.png'
-          alt='até 55% de desconto esse mês'
+          alt='até 20% de desconto esse mês'
         />
 
         <Image
           src='/banner-ofertas-desktop.png'
-          alt='alt'
+          alt='até 20% de desconto esse mês'
           width={0}
           height={0}
           sizes='100vw'
           className='w-full h-[450px] hidden lg:block object-cover rounded-lg'
         />
-
-        <div className='mt-8 px-5 '>
-          <Categories />
-        </div>
 
         <div className='my-8'>
           <TextTitleBase>Ofertas da semana</TextTitleBase>

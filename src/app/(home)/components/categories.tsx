@@ -1,17 +1,37 @@
-import { prismaClient } from "@/lib/prisma";
-import CategoriesItens from "./categories-itens";
-import Container from "@/components/ui/container";
+import { prismaClient } from '@/lib/prisma'
+import CategoriesItens from './categories-itens'
+
+const fixCategories = [
+  {
+    id: '1',
+    name: 'Ofertas',
+    slug: 'ofertas',
+    imageUrl: '',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: '2',
+    name: 'Catálogo',
+    slug: 'catalogo',
+    imageUrl: '',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+]
 
 const Categories = async () => {
-  const categories = await prismaClient.category.findMany({});
+  const categories = await prismaClient.category.findMany({})
+
+  const newCategories = [...categories, ...fixCategories]
 
   return (
-    <Container className="grid grid-cols-2 gap-y-2 gap-x-4">
-      {categories.map((categorie) => (
+    <div className='flex w-full gap-y-2 gap-x-2 items-center justify-between'>
+      {newCategories.map((categorie) => (
         <CategoriesItens key={categorie.id} categorie={categorie} />
       ))}
-    </Container>
-  );
-};
+    </div>
+  )
+}
 
-export default Categories;
+export default Categories

@@ -57,10 +57,10 @@ const Header = () => {
                   <div className='flex item-center gap-2 my-4'>
                     <Avatar>
                       <AvatarFallback>
-                        {session.user.name![0].toUpperCase()}
+                        {(session?.user?.name?.[0] ?? '').toUpperCase()}
                       </AvatarFallback>
                       {session.user.image && (
-                        <AvatarImage src={session.user.image!} />
+                        <AvatarImage src={session.user.image} />
                       )}
                     </Avatar>
 

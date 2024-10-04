@@ -1,7 +1,14 @@
 'use client'
 
+import Categories from '@/app/(home)/components/categories'
 import { useCart } from '@/providers/cart'
-import { LogInIcon, LogOutIcon, ShoppingCartIcon, UserIcon } from 'lucide-react'
+import {
+  LogInIcon,
+  LogOutIcon,
+  Search,
+  ShoppingCartIcon,
+  UserIcon,
+} from 'lucide-react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,9 +16,9 @@ import { Avatar, AvatarFallback, AvatarImage } from './avatar'
 import { Button } from './button'
 import { Card } from './card'
 import Cart from './cart'
+import { Input } from './input'
+import { Separator } from './separator'
 import { Sheet, SheetContent, SheetTrigger } from './sheet'
-
-import serafaSuplementos from '../../../public/logo/serafa-suplementos.png'
 
 const HeaderDesktop = () => {
   const { data: session, status } = useSession()
@@ -27,8 +34,8 @@ const HeaderDesktop = () => {
   }
 
   return (
-    <Card className='py-8 px-5 hidden lg:block'>
-      <div className='container flex justify-between items-center '>
+    <Card className='py-8 lg:py-0 lg:pt-8 hidden lg:block'>
+      <div className='container flex justify-between items-center gap-36'>
         <Link href='/'>
           <Image
             src='/logo/serafa-suplementos.png'
@@ -39,21 +46,15 @@ const HeaderDesktop = () => {
           />
         </Link>
 
-        <div>
-          <ul className='flex gap-10 items-center'>
-            <Link href='/'>
-              <li className='font-bold'>Inicio</li>
-            </Link>
-            <hr className='w-[2px] h-6 bg-accent' />
-            <Link href='/catalogo'>
-              <li className='font-bold'>Catálogo</li>
-            </Link>
-            <hr className='w-[2px] h-6 bg-accent' />
-            <Link href='/ofertas'>
-              <li className='font-bold'>Ofertas</li>
-            </Link>
-          </ul>
-        </div>
+        <form className='relative flex-1'>
+          <Input placeholder='Pesquise...' className='border-primary' />
+          <Button
+            className='absolute top-0 h-10 right-0 rounded-tl-none rounded-bl-none'
+            size='icon'
+          >
+            <Search size={18} />
+          </Button>
+        </form>
 
         <div className='flex gap-4'>
           <Sheet>
@@ -146,6 +147,10 @@ const HeaderDesktop = () => {
             </Sheet>
           </div>
         </div>
+      </div>
+      <Separator className='mt-4 hidden lg:flex' />
+      <div className='container hidden lg:flex'>
+        <Categories />
       </div>
     </Card>
   )
