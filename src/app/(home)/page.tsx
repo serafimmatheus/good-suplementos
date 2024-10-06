@@ -1,11 +1,8 @@
 import { CarouselApp } from '@/components/shared/carousel'
-import Menu from '@/components/shared/menu'
-import { MenuDesktop } from '@/components/shared/menu/menu-desktop'
 import TextTitleBase from '@/components/ui/text-title-base'
 import { prismaClient } from '@/lib/prisma'
 import Image from 'next/image'
 import Link from 'next/link'
-import Categories from './components/categories'
 import PromoBanner from './components/promo-banner'
 
 export default async function Home() {
