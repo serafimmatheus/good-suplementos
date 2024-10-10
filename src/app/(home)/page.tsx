@@ -104,7 +104,7 @@ export default async function Home() {
         />
 
         <div className='my-8'>
-          <TextTitleBase>Creatinas</TextTitleBase>
+          <TextTitleBase>Todas as Creatinas</TextTitleBase>
           <CarouselApp products={creatina} />
         </div>
       </div>
